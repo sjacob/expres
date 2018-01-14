@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_treatementitem})}|">Show TreatementItem - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${treatementItem}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="treatementitem-titem-field" data-z="e51cac37">
+            	      <strong data-th-text="#{label_treatementitem_titem}">tItem</strong>
+                    <span data-th-text="*{{tItem}}">tItemValue</span>
+         	        </li>
+                  <li id="treatementitem-priority-field" data-z="86eb8847">
+            	      <strong data-th-text="#{label_treatementitem_priority}">priority</strong>
+                    <span data-th-text="*{{priority}}">priorityValue</span>
+         	        </li>
+                  <li id="treatementitem-status-field" data-z="f67cf087">
+            	      <strong data-th-text="#{label_treatementitem_status}">status</strong>
+                    <span data-th-text="*{{status}}">statusValue</span>
+         	        </li>
+                  <li id="treatementitem-requestscale-field" data-z="27bfb947">
+            	      <strong data-th-text="#{label_treatementitem_requestscale}">requestScale</strong>
+                    <span data-th-text="*{{requestScale}}">requestScaleValue</span>
+         	        </li>
+                  <li id="treatementitem-totaltimespent-field" data-z="a75572e7">
+            	      <strong data-th-text="#{label_treatementitem_totaltimespent}">totalTimeSpent</strong>
+                    <span data-th-text="*{{totalTimeSpent}}">totalTimeSpentValue</span>
+         	        </li>
+                  <li id="treatementitem-atrisk-field" data-z="d72d6aa7">
+            	      <strong data-th-text="#{label_treatementitem_atrisk}">atRisk</strong>
+                    <span data-th-text="*{{atRisk}}">atRiskValue</span>
+         	        </li>
+                  <li id="treatementitem-treatmentschedule-field" data-z="260d6737">
+            	      <strong data-th-text="#{label_treatementitem_treatmentschedule}">treatmentSchedule</strong>
+                    <span data-th-text="*{{treatmentSchedule}}">treatmentScheduleValue</span>
+         	        </li>
+                  <li id="treatementitem-nextscheduledate-field" data-z="50a73607">
+            	      <strong data-th-text="#{label_treatementitem_nextscheduledate}">nextScheduleDate</strong>
+                    <span data-th-text="*{{nextScheduleDate}}">nextScheduleDateValue</span>
+         	        </li>
+                  <li id="treatementitem-request-field" data-z="17cbf917">
+            	      <strong data-th-text="#{label_treatementitem_request}">request</strong>
+                    <span data-th-text="*{{request}}">requestValue</span>
+         	        </li>
+                  <li id="treatementitem-createddate-field" data-z="3eb8f457">
+            	      <strong data-th-text="#{label_treatementitem_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="treatementitem-createdby-field" data-z="40cc1137">
+            	      <strong data-th-text="#{label_treatementitem_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="treatementitem-modifieddate-field" data-z="661c207">
+            	      <strong data-th-text="#{label_treatementitem_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="treatementitem-modifiedby-field" data-z="feac8ae7">
+            	      <strong data-th-text="#{label_treatementitem_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

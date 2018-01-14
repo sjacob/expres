@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="researchdocuments-detailModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('ExhibitionsItemResearchDocumentsThymeleafController')}">
+    <table id="researchdocuments-detail-table-item-to-remove" data-parent-table="exhibition-entity-table" data-data-parent-id="${exhibition != null ? exhibition.id : ''}" data-data-load-url="${collectionLink.to('datatablesByIdsIn').with('exhibition', '_PARENTID_')}">
+      <thead>
+        <tr>
+              <th data-data="exhibition" data-th-text="#{label_exhibition_researchdocuments_exhibition}">exhibition</th>
+              <th data-data="rdItem" data-th-text="#{label_exhibition_researchdocuments_rditem}">rdItem</th>
+              <th data-data="title" data-th-text="#{label_exhibition_researchdocuments_title}">title</th>
+              <th data-data="author" data-th-text="#{label_exhibition_researchdocuments_author}">author</th>
+              <th data-data="yearPublished" data-th-text="#{label_exhibition_researchdocuments_yearpublished}">yearPublished</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+              <td>exhibition</td>
+              <td>rdItem</td>
+              <td>title</td>
+              <td>author</td>
+              <td>yearPublished</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

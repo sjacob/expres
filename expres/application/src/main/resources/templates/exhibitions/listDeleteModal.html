@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="exhibition-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('ExhibitionsCollectionThymeleafController')},itemLink=${@linkBuilder.of('ExhibitionsItemThymeleafController')}">
+    <table id="exhibition-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="title" data-th-text="#{label_exhibition_title}">title</th>
+          <th data-data="curator" data-th-text="#{label_exhibition_curator}">curator</th>
+          <th data-data="fileNumber" data-th-text="#{label_exhibition_filenumber}">fileNumber</th>
+          <th data-data="startDate" data-th-text="#{label_exhibition_startdate}">startDate</th>
+          <th data-data="endDate" data-th-text="#{label_exhibition_enddate}">endDate</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>title</td>
+          <td>curator</td>
+          <td>fileNumber</td>
+          <td>startDate</td>
+          <td>endDate</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

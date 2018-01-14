@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="pageopening-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('PageOpeningsCollectionThymeleafController')},itemLink=${@linkBuilder.of('PageOpeningsItemThymeleafController')}">
+    <table id="pageopening-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="exhibitionItem" data-th-text="#{label_pageopening_exhibitionitem}">exhibitionItem</th>
+          <th data-data="title" data-th-text="#{label_pageopening_title}">title</th>
+          <th data-data="pageNumber" data-th-text="#{label_pageopening_pagenumber}">pageNumber</th>
+          <th data-data="displayStart" data-th-text="#{label_pageopening_displaystart}">displayStart</th>
+          <th data-data="displayEnd" data-th-text="#{label_pageopening_displayend}">displayEnd</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>exhibitionItem</td>
+          <td>title</td>
+          <td>pageNumber</td>
+          <td>displayStart</td>
+          <td>displayEnd</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

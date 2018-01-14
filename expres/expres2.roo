@@ -1,0 +1,77 @@
+// The data access layer
+/////////////////////////
+
+repository jpa --all
+
+finder add --entity model:~.Exhibition --name findByTitle
+finder add --entity model:~.Request --name findByRequestor
+finder add --entity model:~.CollectionItem --name findByTitle
+
+// The service layer
+//////////////////////
+
+// Service API and Implementation
+service --all
+
+// The view layer
+//////////////////
+
+// Spring MVC setup
+web mvc setup
+
+// JSON Rest controllers
+web mvc controller --all --responseType JSON --pathPrefix /api
+
+// THYMELEAF views
+web mvc view setup --type THYMELEAF
+
+/// Include templates inside generated project to allow developers to customize them
+web mvc templates setup --type THYMELEAF
+
+/// Thymeleaf controllers
+
+//// Main controllers
+web mvc controller --all --responseType THYMELEAF
+// web mvc controller --entity model:~.Exhibition --responseType THYMELEAF
+// web mvc controller --entity model:~.Request --responseType THYMELEAF
+// web mvc controller --entity model:~.Loan --responseType THYMELEAF
+// web mvc controller --entity model:~.Contact --responseType THYMELEAF
+// web mvc controller --entity model:~.Venue --responseType THYMELEAF
+// web mvc controller --entity model:~.ExhibitionItem --responseType THYMELEAF
+
+
+//// Relationship controllers
+web mvc detail --all --views show --responseType THYMELEAF
+// web mvc detail --entity model:~.Exhibition --field items --responseType THYMELEAF
+// web mvc detail --entity model:~.Exhibition --field researchDocuments --responseType THYMELEAF
+
+
+//// Search controllers
+web mvc finder --all --responseType THYMELEAF
+
+
+// The security layer
+//////////////////////
+
+// Spring security setup
+security setup --provider SPRINGLETS_JPA
+
+// Auditing
+
+jpa audit setup
+
+jpa audit add ---entity model:~.Exhibition
+jpa audit add ---entity model:~.ExhibitionItem
+jpa audit add ---entity model:~.Venue
+jpa audit add ---entity model:~.Loan
+jpa audit add ---entity model:~.LoanItem
+jpa audit add ---entity model:~.Contact
+jpa audit add ---entity model:~.CollectionItem
+jpa audit add ---entity model:~.DigitalObject
+jpa audit add ---entity model:~.ResearchDocument
+jpa audit add ---entity model:~.Movement
+jpa audit add ---entity model:~.TreatementItem
+jpa audit add ---entity model:~.Treatment
+jpa audit add ---entity model:~.Request
+jpa audit add ---entity model:~.PageOpening
+

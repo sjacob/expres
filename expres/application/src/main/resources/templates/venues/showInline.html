@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_venue})}|">Show Venue - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${venue}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="venue-name-field" data-z="f6c35c64">
+            	      <strong data-th-text="#{label_venue_name}">name</strong>
+                    <span data-th-text="*{{name}}">nameValue</span>
+         	        </li>
+                  <li id="venue-startdate-field" data-z="11acc83a">
+            	      <strong data-th-text="#{label_venue_startdate}">startDate</strong>
+                    <span data-th-text="*{{startDate}}">startDateValue</span>
+         	        </li>
+                  <li id="venue-enddate-field" data-z="de2ddfda">
+            	      <strong data-th-text="#{label_venue_enddate}">endDate</strong>
+                    <span data-th-text="*{{endDate}}">endDateValue</span>
+         	        </li>
+                  <li id="venue-venuecontact-field" data-z="a71ad684">
+            	      <strong data-th-text="#{label_venue_venuecontact}">venueContact</strong>
+                    <span data-th-text="*{{venueContact}}">venueContactValue</span>
+         	        </li>
+                  <li id="venue-createddate-field" data-z="b8ae6cba">
+            	      <strong data-th-text="#{label_venue_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="venue-createdby-field" data-z="2d7a465a">
+            	      <strong data-th-text="#{label_venue_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="venue-modifieddate-field" data-z="cb1b5604">
+            	      <strong data-th-text="#{label_venue_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="venue-modifiedby-field" data-z="a7c4fa24">
+            	      <strong data-th-text="#{label_venue_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

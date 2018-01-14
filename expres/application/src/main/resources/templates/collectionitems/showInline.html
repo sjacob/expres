@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_collectionitem})}|">Show CollectionItem - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${collectionItem}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="collectionitem-bibid-field" data-z="855c002">
+            	      <strong data-th-text="#{label_collectionitem_bibid}">bibId</strong>
+                    <span data-th-text="*{{bibId}}">bibIdValue</span>
+         	        </li>
+                  <li id="collectionitem-callnumber-field" data-z="fa5e173c">
+            	      <strong data-th-text="#{label_collectionitem_callnumber}">callNumber</strong>
+                    <span data-th-text="*{{callNumber}}">callNumberValue</span>
+         	        </li>
+                  <li id="collectionitem-copy-field" data-z="33f31b1c">
+            	      <strong data-th-text="#{label_collectionitem_copy}">copy</strong>
+                    <span data-th-text="*{{copy}}">copyValue</span>
+         	        </li>
+                  <li id="collectionitem-archivespacenumber-field" data-z="ad3f9d5c">
+            	      <strong data-th-text="#{label_collectionitem_archivespacenumber}">archiveSpaceNumber</strong>
+                    <span data-th-text="*{{archiveSpaceNumber}}">archiveSpaceNumberValue</span>
+         	        </li>
+                  <li id="collectionitem-specialcollectionspapers-field" data-z="512548dc">
+            	      <strong data-th-text="#{label_collectionitem_specialcollectionspapers}">specialCollectionsPapers</strong>
+                    <span data-th-text="*{{specialCollectionsPapers}}">specialCollectionsPapersValue</span>
+         	        </li>
+                  <li id="collectionitem-hprmnumber-field" data-z="427ac69c">
+            	      <strong data-th-text="#{label_collectionitem_hprmnumber}">hprmNumber</strong>
+                    <span data-th-text="*{{hprmNumber}}">hprmNumberValue</span>
+         	        </li>
+                  <li id="collectionitem-barcodenumber-field" data-z="55c9faa2">
+            	      <strong data-th-text="#{label_collectionitem_barcodenumber}">barcodeNumber</strong>
+                    <span data-th-text="*{{barcodeNumber}}">barcodeNumberValue</span>
+         	        </li>
+                  <li id="collectionitem-persistentidentifier-field" data-z="c78edfdc">
+            	      <strong data-th-text="#{label_collectionitem_persistentidentifier}">persistentIdentifier</strong>
+                    <span data-th-text="*{{persistentIdentifier}}">persistentIdentifierValue</span>
+         	        </li>
+                  <li id="collectionitem-collection-field" data-z="29dea03c">
+            	      <strong data-th-text="#{label_collectionitem_collection}">collection</strong>
+                    <span data-th-text="*{{collection}}">collectionValue</span>
+         	        </li>
+                  <li id="collectionitem-title-field" data-z="e052f3a2">
+            	      <strong data-th-text="#{label_collectionitem_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="collectionitem-creator-field" data-z="94cd0462">
+            	      <strong data-th-text="#{label_collectionitem_creator}">creator</strong>
+                    <span data-th-text="*{{creator}}">creatorValue</span>
+         	        </li>
+                  <li id="collectionitem-dateofitem-field" data-z="236c593c">
+            	      <strong data-th-text="#{label_collectionitem_dateofitem}">dateOfItem</strong>
+                    <span data-th-text="*{{dateOfItem}}">dateOfItemValue</span>
+         	        </li>
+                  <li id="collectionitem-itemtype-field" data-z="89a045bc">
+            	      <strong data-th-text="#{label_collectionitem_itemtype}">itemType</strong>
+                    <span data-th-text="*{{itemType}}">itemTypeValue</span>
+         	        </li>
+                  <li id="collectionitem-inscription-field" data-z="e107c562">
+            	      <strong data-th-text="#{label_collectionitem_inscription}">inscription</strong>
+                    <span data-th-text="*{{inscription}}">inscriptionValue</span>
+         	        </li>
+                  <li id="collectionitem-originallanguage-field" data-z="e5f60d3c">
+            	      <strong data-th-text="#{label_collectionitem_originallanguage}">originalLanguage</strong>
+                    <span data-th-text="*{{originalLanguage}}">originalLanguageValue</span>
+         	        </li>
+                  <li id="collectionitem-publisher-field" data-z="9b0cb5a2">
+            	      <strong data-th-text="#{label_collectionitem_publisher}">publisher</strong>
+                    <span data-th-text="*{{publisher}}">publisherValue</span>
+         	        </li>
+                  <li id="collectionitem-acquisitiondetails-field" data-z="e68e403c">
+            	      <strong data-th-text="#{label_collectionitem_acquisitiondetails}">acquisitionDetails</strong>
+                    <span data-th-text="*{{acquisitionDetails}}">acquisitionDetailsValue</span>
+         	        </li>
+                  <li id="collectionitem-copyrightstatus-field" data-z="caee1fe2">
+            	      <strong data-th-text="#{label_collectionitem_copyrightstatus}">copyrightStatus</strong>
+                    <span data-th-text="*{{copyrightStatus}}">copyrightStatusValue</span>
+         	        </li>
+                  <li id="collectionitem-researchnotes-field" data-z="ba32dac2">
+            	      <strong data-th-text="#{label_collectionitem_researchnotes}">researchNotes</strong>
+                    <span data-th-text="*{{researchNotes}}">researchNotesValue</span>
+         	        </li>
+                  <li id="collectionitem-itemsize-field" data-z="86f948dc">
+            	      <strong data-th-text="#{label_collectionitem_itemsize}">itemSize</strong>
+                    <span data-th-text="*{{itemSize}}">itemSizeValue</span>
+         	        </li>
+                  <li id="collectionitem-medium-field" data-z="e9cc37dc">
+            	      <strong data-th-text="#{label_collectionitem_medium}">medium</strong>
+                    <span data-th-text="*{{medium}}">mediumValue</span>
+         	        </li>
+                  <li id="collectionitem-descriptionphysical-field" data-z="2df93b22">
+            	      <strong data-th-text="#{label_collectionitem_descriptionphysical}">descriptionPhysical</strong>
+                    <span data-th-text="*{{descriptionPhysical}}">descriptionPhysicalValue</span>
+         	        </li>
+                  <li id="collectionitem-originalfordisplay-field" data-z="472a1dbc">
+            	      <strong data-th-text="#{label_collectionitem_originalfordisplay}">originalForDisplay</strong>
+                    <span data-th-text="*{{originalForDisplay}}">originalForDisplayValue</span>
+         	        </li>
+                  <li id="collectionitem-boundwithpageturns-field" data-z="5b129e3c">
+            	      <strong data-th-text="#{label_collectionitem_boundwithpageturns}">boundWithPageTurns</strong>
+                    <span data-th-text="*{{boundWithPageTurns}}">boundWithPageTurnsValue</span>
+         	        </li>
+                  <li id="collectionitem-maximumheight-field" data-z="1a9e82e2">
+            	      <strong data-th-text="#{label_collectionitem_maximumheight}">maximumHeight</strong>
+                    <span data-th-text="*{{maximumHeight}}">maximumHeightValue</span>
+         	        </li>
+                  <li id="collectionitem-maximumanglepageopening-field" data-z="856f6d02">
+            	      <strong data-th-text="#{label_collectionitem_maximumanglepageopening}">maximumAnglePageOpening</strong>
+                    <span data-th-text="*{{maximumAnglePageOpening}}">maximumAnglePageOpeningValue</span>
+         	        </li>
+                  <li id="collectionitem-displayrecommendation-field" data-z="35ab8962">
+            	      <strong data-th-text="#{label_collectionitem_displayrecommendation}">displayRecommendation</strong>
+                    <span data-th-text="*{{displayRecommendation}}">displayRecommendationValue</span>
+         	        </li>
+                  <li id="collectionitem-externalframesize-field" data-z="a5aec1c2">
+            	      <strong data-th-text="#{label_collectionitem_externalframesize}">externalFrameSize</strong>
+                    <span data-th-text="*{{externalFrameSize}}">externalFrameSizeValue</span>
+         	        </li>
+                  <li id="collectionitem-internalframesize-field" data-z="1a4a5002">
+            	      <strong data-th-text="#{label_collectionitem_internalframesize}">internalFrameSize</strong>
+                    <span data-th-text="*{{internalFrameSize}}">internalFrameSizeValue</span>
+         	        </li>
+                  <li id="collectionitem-framingorientation-field" data-z="d514c21c">
+            	      <strong data-th-text="#{label_collectionitem_framingorientation}">framingOrientation</strong>
+                    <span data-th-text="*{{framingOrientation}}">framingOrientationValue</span>
+         	        </li>
+                  <li id="collectionitem-framesize-field" data-z="35484b82">
+            	      <strong data-th-text="#{label_collectionitem_framesize}">frameSize</strong>
+                    <span data-th-text="*{{frameSize}}">frameSizeValue</span>
+         	        </li>
+                  <li id="collectionitem-displayrequestsforpreservation-field" data-z="d3e3c77c">
+            	      <strong data-th-text="#{label_collectionitem_displayrequestsforpreservation}">displayRequestsForPreservation</strong>
+                    <span data-th-text="*{{displayRequestsForPreservation}}">displayRequestsForPreservationValue</span>
+         	        </li>
+                  <li id="collectionitem-mattcolour-field" data-z="38a7241c">
+            	      <strong data-th-text="#{label_collectionitem_mattcolour}">mattColour</strong>
+                    <span data-th-text="*{{mattColour}}">mattColourValue</span>
+         	        </li>
+                  <li id="collectionitem-framingnotes-field" data-z="c3f939bc">
+            	      <strong data-th-text="#{label_collectionitem_framingnotes}">framingNotes</strong>
+                    <span data-th-text="*{{framingNotes}}">framingNotesValue</span>
+         	        </li>
+                  <li id="collectionitem-supporttype-field" data-z="4e28ff62">
+            	      <strong data-th-text="#{label_collectionitem_supporttype}">supportType</strong>
+                    <span data-th-text="*{{supportType}}">supportTypeValue</span>
+         	        </li>
+                  <li id="collectionitem-supportnotes-field" data-z="1de55e5c">
+            	      <strong data-th-text="#{label_collectionitem_supportnotes}">supportNotes</strong>
+                    <span data-th-text="*{{supportNotes}}">supportNotesValue</span>
+         	        </li>
+                  <li id="collectionitem-supportnumbercode-field" data-z="fcb02dc2">
+            	      <strong data-th-text="#{label_collectionitem_supportnumbercode}">supportNumberCode</strong>
+                    <span data-th-text="*{{supportNumberCode}}">supportNumberCodeValue</span>
+         	        </li>
+                  <li id="collectionitem-modifieddate-field" data-z="b4c691fc">
+            	      <strong data-th-text="#{label_collectionitem_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="collectionitem-modifiedby-field" data-z="d87ed41c">
+            	      <strong data-th-text="#{label_collectionitem_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+                  <li id="collectionitem-createddate-field" data-z="9f2fd1c2">
+            	      <strong data-th-text="#{label_collectionitem_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="collectionitem-createdby-field" data-z="81a14d62">
+            	      <strong data-th-text="#{label_collectionitem_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

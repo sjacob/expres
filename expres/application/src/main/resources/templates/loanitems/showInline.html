@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_loanitem})}|">Show LoanItem - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${loanItem}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="loanitem-loan-field" data-z="1d759bce">
+            	      <strong data-th-text="#{label_loanitem_loan}">loan</strong>
+                    <span data-th-text="*{{loan}}">loanValue</span>
+         	        </li>
+                  <li id="loanitem-placement-field" data-z="6db4b3b0">
+            	      <strong data-th-text="#{label_loanitem_placement}">placement</strong>
+                    <span data-th-text="*{{placement}}">placementValue</span>
+         	        </li>
+                  <li id="loanitem-supporttype-field" data-z="1f5a6310">
+            	      <strong data-th-text="#{label_loanitem_supporttype}">supportType</strong>
+                    <span data-th-text="*{{supportType}}">supportTypeValue</span>
+         	        </li>
+                  <li id="loanitem-supportnotes-field" data-z="72e0706e">
+            	      <strong data-th-text="#{label_loanitem_supportnotes}">supportNotes</strong>
+                    <span data-th-text="*{{supportNotes}}">supportNotesValue</span>
+         	        </li>
+                  <li id="loanitem-lightlevels-field" data-z="3f9f7b90">
+            	      <strong data-th-text="#{label_loanitem_lightlevels}">lightLevels</strong>
+                    <span data-th-text="*{{lightLevels}}">lightLevelsValue</span>
+         	        </li>
+                  <li id="loanitem-displaynotes-field" data-z="403b46ce">
+            	      <strong data-th-text="#{label_loanitem_displaynotes}">displayNotes</strong>
+                    <span data-th-text="*{{displayNotes}}">displayNotesValue</span>
+         	        </li>
+                  <li id="loanitem-loanconditions-field" data-z="ffb9ba2e">
+            	      <strong data-th-text="#{label_loanitem_loanconditions}">loanConditions</strong>
+                    <span data-th-text="*{{loanConditions}}">loanConditionsValue</span>
+         	        </li>
+                  <li id="loanitem-litem-field" data-z="51155510">
+            	      <strong data-th-text="#{label_loanitem_litem}">lItem</strong>
+                    <span data-th-text="*{{lItem}}">lItemValue</span>
+         	        </li>
+                  <li id="loanitem-createddate-field" data-z="70613570">
+            	      <strong data-th-text="#{label_loanitem_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="loanitem-createdby-field" data-z="8593c490">
+            	      <strong data-th-text="#{label_loanitem_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="loanitem-modifieddate-field" data-z="9c1a40e">
+            	      <strong data-th-text="#{label_loanitem_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="loanitem-modifiedby-field" data-z="52db42ae">
+            	      <strong data-th-text="#{label_loanitem_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

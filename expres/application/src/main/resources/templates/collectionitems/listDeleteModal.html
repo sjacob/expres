@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="collectionitem-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('CollectionItemsCollectionThymeleafController')},itemLink=${@linkBuilder.of('CollectionItemsItemThymeleafController')}">
+    <table id="collectionitem-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="bibId" data-th-text="#{label_collectionitem_bibid}">bibId</th>
+          <th data-data="callNumber" data-th-text="#{label_collectionitem_callnumber}">callNumber</th>
+          <th data-data="copy" data-th-text="#{label_collectionitem_copy}">copy</th>
+          <th data-data="archiveSpaceNumber" data-th-text="#{label_collectionitem_archivespacenumber}">archiveSpaceNumber</th>
+          <th data-data="specialCollectionsPapers" data-th-text="#{label_collectionitem_specialcollectionspapers}">specialCollectionsPapers</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>bibId</td>
+          <td>callNumber</td>
+          <td>copy</td>
+          <td>archiveSpaceNumber</td>
+          <td>specialCollectionsPapers</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

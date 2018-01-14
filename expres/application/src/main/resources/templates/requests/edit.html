@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+  <head id="head">
+
+    <title data-th-text="#{label_edit_entity(#{label_request})}">
+    Edit Request - Spring Roo application</title>
+
+    <!-- DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/2.5.4/build/jquery.datetimepicker.min.css}" />
+
+  </head>
+  
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content">
+
+        <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('RequestsCollectionThymeleafController')},itemLink=${@linkBuilder.of('RequestsItemThymeleafController')}">
+
+          <h1 data-th-text="#{label_edit_entity(#{label_request})}">Edit Request</h1>
+
+          <!-- FORM -->
+          <form class="form-horizontal validate" method="POST" data-th-object="${request}" data-th-action="${itemLink.to('update').with('request', request.id)}">
+            <input type="hidden" name="_method" value="PUT" />
+            	<input type="hidden" name="version" data-th-value="*{version}" />
+
+            <!-- CONCURRENCY CONTROL -->
+            <div class="alert alert-warning" data-th-if="${concurrency}">
+              <h2 data-th-text="#{label_concurrency_title}">Warning! This record has been updated by an other user.</h2>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="apply"> <span data-th-text="#{label_concurrency_apply}">Apply my changes anyway</span> <i><span data-th-text="#{label_concurrency_apply_info}">(discard all the changes applied by the other users).</span></i>
+                </input></label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="discard" checked=""> <span data-th-text="#{label_concurrency_discard}">Discard all my changes and reload this record.</span>
+                </input></label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Accept</button>
+            </br></div>
+            <!-- /CONCURRENCY CONTROL -->
+
+             <fieldset id="containerFields">
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_request})}">Request data </legend>
+
+<div class="form-group has-error has-feedback" data-z="33ae04fa" id="request-requestor-field" data-th-classappend="${#fields.hasErrors('requestor')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="requestor" class="col-md-3 control-label" data-th-text="#{label_request_requestor}">requestor</label>
+  <div class="col-md-6">
+    <input id="requestor" name="requestor" data-th-value="*{{requestor}}" type="text" class="form-control" placeholder="requestor" data-th-placeholder="#{label_request_requestor}" data-toggle="tooltip" aria-describedby="requestorStatus" />
+      <span data-th-classappend="${#fields.hasErrors('requestor')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('requestor')}" aria-hidden="true"></span>
+      <span id="requestor-error" class="help-block" data-th-if="${#fields.hasErrors('requestor')}" data-th-errors="*{requestor}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="d792aec4" id="request-requestorphone-field" data-th-classappend="${#fields.hasErrors('requestorPhone')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="requestorPhone" class="col-md-3 control-label" data-th-text="#{label_request_requestorphone}">requestorPhone</label>
+  <div class="col-md-6">
+    <input id="requestorPhone" name="requestorPhone" data-th-value="*{{requestorPhone}}" type="text" class="form-control" placeholder="requestorPhone" data-th-placeholder="#{label_request_requestorphone}" data-toggle="tooltip" aria-describedby="requestorPhoneStatus" />
+      <span data-th-classappend="${#fields.hasErrors('requestorPhone')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('requestorPhone')}" aria-hidden="true"></span>
+      <span id="requestorPhone-error" class="help-block" data-th-if="${#fields.hasErrors('requestorPhone')}" data-th-errors="*{requestorPhone}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="d5c4e6a4" id="request-requestorsection-field" data-th-classappend="${#fields.hasErrors('requestorSection')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="requestorSection" class="col-md-3 control-label" data-th-text="#{label_request_requestorsection}">requestorSection</label>
+  <div class="col-md-6">
+    <input id="requestorSection" name="requestorSection" data-th-value="*{{requestorSection}}" type="text" class="form-control" placeholder="requestorSection" data-th-placeholder="#{label_request_requestorsection}" data-toggle="tooltip" aria-describedby="requestorSectionStatus" />
+      <span data-th-classappend="${#fields.hasErrors('requestorSection')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('requestorSection')}" aria-hidden="true"></span>
+      <span id="requestorSection-error" class="help-block" data-th-if="${#fields.hasErrors('requestorSection')}" data-th-errors="*{requestorSection}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="6b3a0d7a" id="request-event-field" data-th-classappend="${#fields.hasErrors('event')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="event" class="col-md-3 control-label" data-th-text="#{label_request_event}">event</label>
+  <div class="col-md-6">
+    <input id="event" name="event" data-th-value="*{{event}}" type="text" class="form-control" placeholder="event" data-th-placeholder="#{label_request_event}" data-toggle="tooltip" aria-describedby="eventStatus" />
+      <span data-th-classappend="${#fields.hasErrors('event')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('event')}" aria-hidden="true"></span>
+      <span id="event-error" class="help-block" data-th-if="${#fields.hasErrors('event')}" data-th-errors="*{event}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="request-charged-field" data-z="241887fa" data-th-classappend="${#fields.hasErrors('charged')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label class="col-md-3 control-label" for="charged" data-th-text="#{label_request_charged}">charged</label>
+  <div class="col-md-6">
+    <div class="checkbox">
+      <input type="checkbox" data-th-field="*{charged}" data-th-title="#{label_requiredfield}" data-toggle="tooltip" />
+       <span data-th-classappend="${#fields.hasErrors('charged')}? 'form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('charged')}" aria-hidden="true"></span>
+        <span id="charged-error" class="help-block" data-th-if="${#fields.hasErrors('charged')}" data-th-errors="*{charged}">Error message.</span>
+    </div>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="7da529a4" id="request-priority-field" data-th-classappend="${#fields.hasErrors('priority')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="priority" class="col-md-3 control-label" data-th-text="#{label_request_priority}">priority</label>
+  <div class="col-md-6">
+    <input id="priority" name="priority" data-th-value="*{{priority}}" type="text" class="form-control" placeholder="priority" data-th-placeholder="#{label_request_priority}" data-toggle="tooltip" aria-describedby="priorityStatus" />
+      <span data-th-classappend="${#fields.hasErrors('priority')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('priority')}" aria-hidden="true"></span>
+      <span id="priority-error" class="help-block" data-th-if="${#fields.hasErrors('priority')}" data-th-errors="*{priority}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="request-datecompleted-field" data-z="76273dfa" data-th-classappend="${#fields.hasErrors('dateCompleted')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="dateCompleted" class="col-md-3 control-label" data-th-text="#{label_request_datecompleted}">dateCompleted</label>
+  <div class="col-md-3">
+    <input id="dateCompleted" name="dateCompleted" data-th-value="*{{dateCompleted}}" type="text" class="form-control datetimepicker" placeholder="dateCompleted" data-th-placeholder="#{label_request_datecompleted}" data-th-attr="data-dateformat=${dateCompleted_date_format}" data-toggle="tooltip" /> <span data-th-classappend="${#fields.hasErrors('dateCompleted')}? 'glyphicon glyphicon-remove form-control-feedback'" data-th-if="${#fields.hasErrors('dateCompleted')}" aria-hidden="true"></span>
+     <span id="dateCompleted-error" class="help-block" data-th-if="${#fields.hasErrors('dateCompleted')}" data-th-errors="*{dateCompleted}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="30f7fbfa" id="request-treatmentdays-field" data-th-classappend="${#fields.hasErrors('treatmentDays')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="treatmentDays" class="col-md-3 control-label" data-th-text="#{label_request_treatmentdays}">treatmentDays</label>
+  <div class="col-md-6">
+    <input id="treatmentDays" name="treatmentDays" data-th-value="*{{treatmentDays}}" type="text" class="form-control" placeholder="treatmentDays" data-th-placeholder="#{label_request_treatmentdays}" data-toggle="tooltip" aria-describedby="treatmentDaysStatus" />
+      <span data-th-classappend="${#fields.hasErrors('treatmentDays')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('treatmentDays')}" aria-hidden="true"></span>
+      <span id="treatmentDays-error" class="help-block" data-th-if="${#fields.hasErrors('treatmentDays')}" data-th-errors="*{treatmentDays}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="eca8d01a" id="request-completingofficer-field" data-th-classappend="${#fields.hasErrors('completingOfficer')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="completingOfficer" class="col-md-3 control-label" data-th-text="#{label_request_completingofficer}">completingOfficer</label>
+  <div class="col-md-6">
+    <input id="completingOfficer" name="completingOfficer" data-th-value="*{{completingOfficer}}" type="text" class="form-control" placeholder="completingOfficer" data-th-placeholder="#{label_request_completingofficer}" data-toggle="tooltip" aria-describedby="completingOfficerStatus" />
+      <span data-th-classappend="${#fields.hasErrors('completingOfficer')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('completingOfficer')}" aria-hidden="true"></span>
+      <span id="completingOfficer-error" class="help-block" data-th-if="${#fields.hasErrors('completingOfficer')}" data-th-errors="*{completingOfficer}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="request-datedispatched-field" data-z="4047fda4" data-th-classappend="${#fields.hasErrors('dateDispatched')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="dateDispatched" class="col-md-3 control-label" data-th-text="#{label_request_datedispatched}">dateDispatched</label>
+  <div class="col-md-3">
+    <input id="dateDispatched" name="dateDispatched" data-th-value="*{{dateDispatched}}" type="text" class="form-control datetimepicker" placeholder="dateDispatched" data-th-placeholder="#{label_request_datedispatched}" data-th-attr="data-dateformat=${dateDispatched_date_format}" data-toggle="tooltip" /> <span data-th-classappend="${#fields.hasErrors('dateDispatched')}? 'glyphicon glyphicon-remove form-control-feedback'" data-th-if="${#fields.hasErrors('dateDispatched')}" aria-hidden="true"></span>
+     <span id="dateDispatched-error" class="help-block" data-th-if="${#fields.hasErrors('dateDispatched')}" data-th-errors="*{dateDispatched}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="fb17e24" id="request-conservationfile-field" data-th-classappend="${#fields.hasErrors('conservationFile')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="conservationFile" class="col-md-3 control-label" data-th-text="#{label_request_conservationfile}">conservationFile</label>
+  <div class="col-md-6">
+    <input id="conservationFile" name="conservationFile" data-th-value="*{{conservationFile}}" type="text" class="form-control" placeholder="conservationFile" data-th-placeholder="#{label_request_conservationfile}" data-toggle="tooltip" aria-describedby="conservationFileStatus" />
+      <span data-th-classappend="${#fields.hasErrors('conservationFile')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('conservationFile')}" aria-hidden="true"></span>
+      <span id="conservationFile-error" class="help-block" data-th-if="${#fields.hasErrors('conservationFile')}" data-th-errors="*{conservationFile}">Error message.</span>
+  </div>
+</div>
+             </fieldset>
+
+
+              <!-- buttons form -->
+              <div class="form-group">
+                <div class="col-md-12">
+                  <div class="pull-left">
+                    <button type="reset" class="btn btn-default" onclick="location.href='list.html'" data-th-onclick="'location.href=\'' + @{${collectionLink.to('list')}} + '\''" data-th-text="#{label_reset}">Cancel</button>
+                  </div>
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn-primary" data-th-text="#{label_save}">Save</button>
+                  </div>
+                </div>
+              </div>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+   </div>
+   <!-- /CONTAINER -->
+
+   <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+   </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" data-th-src="@{/webjars/datetimepicker/build/jquery.datetimepicker.full.min.js}"></script>
+    <script src="../../static/public/js/datetimepicker-defaults.js" data-th-src="@{/public/js/datetimepicker-defaults.js}"></script>
+
+    <!-- jquery.inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js" data-th-src="@{/webjars/jquery.inputmask/min/jquery.inputmask.bundle.min.js}"></script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+        jQuery(document).ready(
+      	  function() {
+      	    Inputmask.extendAliases({
+      	      'numeric' : {
+      	         'groupSeparator' : /*[[#{label_inputmask_groupSeparator}]]*/'.',
+      	         'radixPoint' : /*[[#{label_inputmask_radixPoint}]]*/','
+      	       },
+      	       'currency' : {
+      	          'prefix' : /*[[#{label_inputmask_prefix}]]*/'',
+      	          'suffix' : /*[[#{label_inputmask_suffix}]]*/' €'
+      	        }
+      	    });
+      	 });
+       })(jQuery);
+    </script>
+    <script src="../../static/public/js/inputmask-defaults.js" data-th-src="@{/public/js/inputmask-defaults.js}"></script>
+
+    <!-- JQuery Validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js" data-th-src="@{/webjars/jquery-validation/dist/additional-methods.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_es.js" data-th-src="@{/webjars/jquery-validation/src/localization/messages_}+${#locale.language}+'.js'" data-th-if="${#locale.language} != 'en'">
+      </script>
+    <script src="../../static/public/js/validation-defaults.js" data-th-src="@{/public/js/validation-defaults.js}">
+      </script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+         jQuery(document).ready(function() {
+      	   jQuery.extend( jQuery.validator.messages, {
+      	     'dateformat' : /*[[#{error_invalid_date}]]*/ 'Please enter a correct date/time',
+      	     'inputmask': /*[[#{error_invalid_maskValue}]]*/ 'Please enter a valid value',
+      	   });
+      	 });
+      })(jQuery);
+      </script>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="loanitem-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('LoanItemsCollectionThymeleafController')},itemLink=${@linkBuilder.of('LoanItemsItemThymeleafController')}">
+    <table id="loanitem-entity-table-items-to-remove-batch" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="loan" data-th-text="#{label_loanitem_loan}">loan</th>
+          <th data-data="placement" data-th-text="#{label_loanitem_placement}">placement</th>
+          <th data-data="supportType" data-th-text="#{label_loanitem_supporttype}">supportType</th>
+          <th data-data="supportNotes" data-th-text="#{label_loanitem_supportnotes}">supportNotes</th>
+          <th data-data="lightLevels" data-th-text="#{label_loanitem_lightlevels}">lightLevels</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>loan</td>
+          <td>placement</td>
+          <td>supportType</td>
+          <td>supportNotes</td>
+          <td>lightLevels</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

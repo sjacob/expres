@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_request})}|">Show Request - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${request}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="request-requestor-field" data-z="33ae04fa">
+            	      <strong data-th-text="#{label_request_requestor}">requestor</strong>
+                    <span data-th-text="*{{requestor}}">requestorValue</span>
+         	        </li>
+                  <li id="request-requestorphone-field" data-z="d792aec4">
+            	      <strong data-th-text="#{label_request_requestorphone}">requestorPhone</strong>
+                    <span data-th-text="*{{requestorPhone}}">requestorPhoneValue</span>
+         	        </li>
+                  <li id="request-requestorsection-field" data-z="d5c4e6a4">
+            	      <strong data-th-text="#{label_request_requestorsection}">requestorSection</strong>
+                    <span data-th-text="*{{requestorSection}}">requestorSectionValue</span>
+         	        </li>
+                  <li id="request-event-field" data-z="6b3a0d7a">
+            	      <strong data-th-text="#{label_request_event}">event</strong>
+                    <span data-th-text="*{{event}}">eventValue</span>
+         	        </li>
+                  <li id="request-charged-field" data-z="241887fa">
+            	      <strong data-th-text="#{label_request_charged}">charged</strong>
+                    <span data-th-text="*{{charged}}">chargedValue</span>
+         	        </li>
+                  <li id="request-priority-field" data-z="7da529a4">
+            	      <strong data-th-text="#{label_request_priority}">priority</strong>
+                    <span data-th-text="*{{priority}}">priorityValue</span>
+         	        </li>
+                  <li id="request-datecompleted-field" data-z="76273dfa">
+            	      <strong data-th-text="#{label_request_datecompleted}">dateCompleted</strong>
+                    <span data-th-text="*{{dateCompleted}}">dateCompletedValue</span>
+         	        </li>
+                  <li id="request-treatmentdays-field" data-z="30f7fbfa">
+            	      <strong data-th-text="#{label_request_treatmentdays}">treatmentDays</strong>
+                    <span data-th-text="*{{treatmentDays}}">treatmentDaysValue</span>
+         	        </li>
+                  <li id="request-completingofficer-field" data-z="eca8d01a">
+            	      <strong data-th-text="#{label_request_completingofficer}">completingOfficer</strong>
+                    <span data-th-text="*{{completingOfficer}}">completingOfficerValue</span>
+         	        </li>
+                  <li id="request-datedispatched-field" data-z="4047fda4">
+            	      <strong data-th-text="#{label_request_datedispatched}">dateDispatched</strong>
+                    <span data-th-text="*{{dateDispatched}}">dateDispatchedValue</span>
+         	        </li>
+                  <li id="request-conservationfile-field" data-z="fb17e24">
+            	      <strong data-th-text="#{label_request_conservationfile}">conservationFile</strong>
+                    <span data-th-text="*{{conservationFile}}">conservationFileValue</span>
+         	        </li>
+                  <li id="request-createddate-field" data-z="eab9f9da">
+            	      <strong data-th-text="#{label_request_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="request-createdby-field" data-z="21469b7a">
+            	      <strong data-th-text="#{label_request_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="request-modifieddate-field" data-z="da816ce4">
+            	      <strong data-th-text="#{label_request_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="request-modifiedby-field" data-z="2d834904">
+            	      <strong data-th-text="#{label_request_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

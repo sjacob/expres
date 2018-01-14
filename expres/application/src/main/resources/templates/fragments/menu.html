@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page menu</title>
+  </head>
+  <body id="body">
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu">
+
+         <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="expres" href="/" data-th-href="@{/}">
+                  <img alt="expres" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">expres</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <ul class="nav navbar-nav" id="entitiesMenuEntries">
+                <li class="dropdown" id="collectionitem-entry" data-z="756b2048">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_collectionitem})}">CollectionItem<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/collectionitems/create-form" data-th-href="@{/collectionitems/create-form}" data-th-utext="#{label_create_entity(#{label_collectionitem})}">Create CollectionItem</a></li>
+	                  <li><a href="/collectionitems" data-th-href="@{/collectionitems}" data-th-utext="#{label_list_entity(#{label_collectionitem_plural})}">List CollectionItem</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="contact-entry" data-z="42bf25d6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_contact})}">Contact<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/contacts/create-form" data-th-href="@{/contacts/create-form}" data-th-utext="#{label_create_entity(#{label_contact})}">Create Contact</a></li>
+	                  <li><a href="/contacts" data-th-href="@{/contacts}" data-th-utext="#{label_list_entity(#{label_contact_plural})}">List Contact</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="digitalobject-entry" data-z="c83a7cb6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_digitalobject})}">DigitalObject<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/digitalobjects/create-form" data-th-href="@{/digitalobjects/create-form}" data-th-utext="#{label_create_entity(#{label_digitalobject})}">Create DigitalObject</a></li>
+	                  <li><a href="/digitalobjects" data-th-href="@{/digitalobjects}" data-th-utext="#{label_list_entity(#{label_digitalobject_plural})}">List DigitalObject</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="exhibition-entry" data-z="1c3e88a8">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_exhibition})}">Exhibition<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/exhibitions/create-form" data-th-href="@{/exhibitions/create-form}" data-th-utext="#{label_create_entity(#{label_exhibition})}">Create Exhibition</a></li>
+	                  <li><a href="/exhibitions" data-th-href="@{/exhibitions}" data-th-utext="#{label_list_entity(#{label_exhibition_plural})}">List Exhibition</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="exhibitionitem-entry" data-z="ce3fbc48">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_exhibitionitem})}">ExhibitionItem<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/exhibitionitems/create-form" data-th-href="@{/exhibitionitems/create-form}" data-th-utext="#{label_create_entity(#{label_exhibitionitem})}">Create ExhibitionItem</a></li>
+	                  <li><a href="/exhibitionitems" data-th-href="@{/exhibitionitems}" data-th-utext="#{label_list_entity(#{label_exhibitionitem_plural})}">List ExhibitionItem</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="loan-entry" data-z="a338a368">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_loan})}">Loan<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/loans/create-form" data-th-href="@{/loans/create-form}" data-th-utext="#{label_create_entity(#{label_loan})}">Create Loan</a></li>
+	                  <li><a href="/loans" data-th-href="@{/loans}" data-th-utext="#{label_list_entity(#{label_loan_plural})}">List Loan</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="loanitem-entry" data-z="c12e7708">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_loanitem})}">LoanItem<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/loanitems/create-form" data-th-href="@{/loanitems/create-form}" data-th-utext="#{label_create_entity(#{label_loanitem})}">Create LoanItem</a></li>
+	                  <li><a href="/loanitems" data-th-href="@{/loanitems}" data-th-utext="#{label_list_entity(#{label_loanitem_plural})}">List LoanItem</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="movement-entry" data-z="31ade2e8">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_movement})}">Movement<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/movements/create-form" data-th-href="@{/movements/create-form}" data-th-utext="#{label_create_entity(#{label_movement})}">Create Movement</a></li>
+	                  <li><a href="/movements" data-th-href="@{/movements}" data-th-utext="#{label_list_entity(#{label_movement_plural})}">List Movement</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="pageopening-entry" data-z="c10be36">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_pageopening})}">PageOpening<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/pageopenings/create-form" data-th-href="@{/pageopenings/create-form}" data-th-utext="#{label_create_entity(#{label_pageopening})}">Create PageOpening</a></li>
+	                  <li><a href="/pageopenings" data-th-href="@{/pageopenings}" data-th-utext="#{label_list_entity(#{label_pageopening_plural})}">List PageOpening</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="request-entry" data-z="7da209d6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_request})}">Request<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/requests/create-form" data-th-href="@{/requests/create-form}" data-th-utext="#{label_create_entity(#{label_request})}">Create Request</a></li>
+	                  <li><a href="/requests" data-th-href="@{/requests}" data-th-utext="#{label_list_entity(#{label_request_plural})}">List Request</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="researchdocument-entry" data-z="4190b208">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_researchdocument})}">ResearchDocument<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/researchdocuments/create-form" data-th-href="@{/researchdocuments/create-form}" data-th-utext="#{label_create_entity(#{label_researchdocument})}">Create ResearchDocument</a></li>
+	                  <li><a href="/researchdocuments" data-th-href="@{/researchdocuments}" data-th-utext="#{label_list_entity(#{label_researchdocument_plural})}">List ResearchDocument</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="treatementitem-entry" data-z="58091448">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_treatementitem})}">TreatementItem<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/treatementitems/create-form" data-th-href="@{/treatementitems/create-form}" data-th-utext="#{label_create_entity(#{label_treatementitem})}">Create TreatementItem</a></li>
+	                  <li><a href="/treatementitems" data-th-href="@{/treatementitems}" data-th-utext="#{label_list_entity(#{label_treatementitem_plural})}">List TreatementItem</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="treatment-entry" data-z="8711e816">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_treatment})}">Treatment<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/treatments/create-form" data-th-href="@{/treatments/create-form}" data-th-utext="#{label_create_entity(#{label_treatment})}">Create Treatment</a></li>
+	                  <li><a href="/treatments" data-th-href="@{/treatments}" data-th-utext="#{label_list_entity(#{label_treatment_plural})}">List Treatment</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="venue-entry" data-z="7927d796">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_venue})}">Venue<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/venues/create-form" data-th-href="@{/venues/create-form}" data-th-utext="#{label_create_entity(#{label_venue})}">Create Venue</a></li>
+	                  <li><a href="/venues" data-th-href="@{/venues}" data-th-utext="#{label_list_entity(#{label_venue_plural})}">List Venue</a></li>
+                 </ul>
+                </li>
+              </ul>
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+              <!-- User menu -->
+              <ul class="nav navbar-nav navbar-right upper-nav session" data-th-replace="~{fragments/session-links :: session}">
+                <!-- Content replaced by the session template fragment session-links.html
+                -->
+                <span>User session data</span>
+              </ul>
+
+
+              <!-- User menu links -->
+              <ul class="nav navbar-nav navbar-right upper-nav links" data-th-replace="~{fragments/session-links :: links}">
+                <!-- Content replaced by the links template fragment session-links.html
+                -->
+                <span>User session data</span>
+              </ul>
+           </div>
+
+          </div>
+    </nav>
+
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu-languages fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu-languages">
+
+         <div class="container">
+
+            <div class="navbar-header">
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="expres" href="/" data-th-href="@{/}">
+                  <img alt="expres" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">expres</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+           </div>
+
+          </div>
+    </nav>
+
+  </body>
+</html>

@@ -1,0 +1,238 @@
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2018-01-12 14:35:55
+project setup --topLevelPackage au.gov.nla.expres --projectName "expres" --java 7 --multimodule STANDARD
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2018-01-12 14:35:58
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2018-01-12 14:36:00
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2018-01-12 14:36:04
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log opened at 2018-01-12 15:13:06
+settings add --name spring.roo.jpa.require.schema-object-name --value false --force
+jpa setup --provider HIBERNATE --database MYSQL
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY --profile dev
+module focus --moduleName model
+enum type --class ~.ContactType --force
+enum constant --name PERSON --class ~.ContactType
+enum constant --name ORGANISATION --class ~.ContactType
+enum type --class ~.ContactRole --force
+enum constant --name LENDER --class ~.ContactRole
+enum constant --name OFFERER --class ~.ContactRole
+enum constant --name MAKER --class ~.ContactRole
+entity jpa --class ~.Exhibition --force
+entity jpa --class ~.ExhibitionItem --force
+entity jpa --class ~.Venue --force
+entity jpa --class ~.Loan --force
+entity jpa --class ~.LoanItem --force
+entity jpa --class ~.Contact --force
+entity jpa --class ~.CollectionItem --force
+entity jpa --class ~.DigitalObject --force
+entity jpa --class ~.ResearchDocument --force
+entity jpa --class ~.Movement --force
+entity jpa --class ~.TreatementItem --force
+entity jpa --class ~.Treatment --force
+entity jpa --class ~.Request --force
+entity jpa --class ~.PageOpening --force
+focus --class ~.Exhibition
+field string --fieldName title
+field string --fieldName curator
+field string --fieldName fileNumber
+field date --fieldName startDate --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field date --fieldName endDate --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field set --fieldName exhibitionItems --type ~.ExhibitionItem --mappedBy exhibition
+field set --fieldName researchDocuments --type ~.ResearchDocument --mappedBy exhibition
+focus --class ~.ExhibitionItem
+field string --fieldName display
+field string --fieldName galleryPlacement
+field string --fieldName galleryReferenceNumber
+field string --fieldName relatedItems
+field string --fieldName requestBarcodeNumber
+field boolean --fieldName ecvm
+field string --fieldName ecvmDate
+field string --fieldName releasedBy
+field string --fieldName requestedBy
+field string --fieldName measuementForDisplay
+field string --fieldName treasuresGalleryIteration
+field date --fieldName installedOn --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field date --fieldName deinstalledOn --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field string --fieldName theme
+field string --fieldName story
+field string --fieldName captionShort
+field string --fieldName captionLong
+field boolean --fieldName permissionRequested
+field string --fieldName permissionGrantedFor
+field boolean --fieldName pinkCompleted
+field boolean --fieldName isItemDigitised
+field boolean --fieldName digitisationRequired
+field string --fieldName digitisationDetails
+field string --fieldName digitisationNotes
+field string --fieldName dlcJobNumber
+field string --fieldName reproductionMedium
+field string --fieldName reproductionDetails
+field set --fieldName pageOpenings --type ~.PageOpening --mappedBy exhibitionItem
+focus --class ~.Venue
+field string --fieldName name
+field date --fieldName startDate --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field date --fieldName endDate --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+focus --class ~.Loan
+field string --fieldName loanNo
+field string --fieldName hprmFileNumber
+field string --fieldName loanType
+field string --fieldName reasonForLoan
+field string --fieldName startDate
+field string --fieldName endDate
+field string --fieldName loanFees
+field string --fieldName sfrReceived
+field string --fieldName otherLoanInfo
+field set --fieldName loanItems --type ~.LoanItem --mappedBy loan
+focus --class ~.LoanItem
+field string --fieldName placement
+field string --fieldName supportType
+field string --fieldName supportNotes
+field string --fieldName lightLevels
+field string --fieldName displayNotes
+field string --fieldName loanConditions
+focus --class ~.Contact
+field set --fieldName venues --type ~.Venue --mappedBy venueContact
+field set --fieldName loans --type ~.Loan --mappedBy loanContact
+field enum --fieldName type --type ~.ContactType --enumType STRING --notNull
+field string --fieldName title
+field string --fieldName firstName
+field string --fieldName lastName
+field string --fieldName address
+field string --fieldName suburb
+field string --fieldName addressState
+field string --fieldName country
+field string --fieldName postcode
+field string --fieldName email
+field string --fieldName fax
+field string --fieldName homePhone
+field string --fieldName workPhone
+field string --fieldName mobilePhone
+field string --fieldName otherPhone
+field enum --fieldName contactRole --type ~.ContactRole --enumType STRING
+field string --fieldName contactPosition
+field string --fieldName comments
+focus --class ~.CollectionItem
+field set --fieldName loans --type ~.LoanItem --mappedBy lItem
+field set --fieldName treatments --type ~.TreatementItem --mappedBy tItem
+field set --fieldName exhibitions --type ~.ExhibitionItem --mappedBy eItem
+field set --fieldName movements --type ~.Movement --mappedBy mItem
+field set --fieldName researchDocuments --type ~.ResearchDocument --mappedBy rdItem
+field set --fieldName photos --type ~.DigitalObject --mappedBy doItem
+field string --fieldName bibId
+field string --fieldName callNumber
+field string --fieldName copy
+field string --fieldName archiveSpaceNumber
+field string --fieldName specialCollectionsPapers
+field string --fieldName hprmNumber
+field string --fieldName barcodeNumber
+field string --fieldName persistentIdentifier
+field string --fieldName collection
+field string --fieldName title
+field string --fieldName creator
+field string --fieldName dateOfItem
+field string --fieldName itemType
+field string --fieldName inscription
+field string --fieldName originalLanguage
+field string --fieldName publisher
+field string --fieldName acquisitionDetails
+field string --fieldName copyrightStatus
+field string --fieldName researchNotes
+field string --fieldName itemSize
+field string --fieldName medium
+field string --fieldName descriptionPhysical
+field boolean --fieldName originalForDisplay
+field boolean --fieldName boundWithPageTurns
+field string --fieldName maximumHeight
+field string --fieldName maximumAnglePageOpening
+field string --fieldName displayRecommendation
+field string --fieldName externalFrameSize
+field string --fieldName internalFrameSize
+field string --fieldName framingOrientation
+field string --fieldName frameSize
+field string --fieldName displayRequestsForPreservation
+field string --fieldName mattColour
+field string --fieldName framingNotes
+field string --fieldName supportType
+field string --fieldName supportNotes
+field string --fieldName supportNumberCode
+focus --class ~.DigitalObject
+field string --fieldName caption
+field string --fieldName filename
+field string --fieldName format
+field file --fieldName photo --contentType JPG
+field string --fieldName referenceUrl
+focus --class ~.ResearchDocument
+field string --fieldName title
+field string --fieldName author
+field string --fieldName yearPublished
+field string --fieldName format
+field file --fieldName document --contentType PDF
+field string --fieldName referenceUrl
+focus --class ~.Movement
+field string --fieldName permanentLocation
+field string --fieldName currentLocation
+field string --fieldName locationNotes
+field string --fieldName movementNotes
+field string --fieldName barcode
+field string --fieldName requestNumberBarcode
+field string --fieldName barcodeValidation
+focus --class ~.TreatementItem
+field set --fieldName treatments --type ~.Treatment --mappedBy tItem
+field string --fieldName priority
+field string --fieldName status
+field string --fieldName requestScale
+field string --fieldName totalTimeSpent
+field boolean --fieldName atRisk
+field boolean --fieldName treatmentSchedule
+field date --fieldName nextScheduleDate --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+focus --class ~.Treatment
+field string --fieldName conservator
+field string --fieldName taskType
+field string --fieldName timeSpent
+focus --class ~.Request
+field set --fieldName requestItems --type ~.TreatementItem --mappedBy request
+field string --fieldName requestor
+field string --fieldName requestorPhone
+field string --fieldName requestorSection
+field string --fieldName event
+field boolean --fieldName charged
+field string --fieldName priority
+field date --fieldName dateCompleted --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field string --fieldName treatmentDays
+field string --fieldName completingOfficer
+field date --fieldName dateDispatched --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field string --fieldName conservationFile
+focus --class ~.PageOpening
+field string --fieldName title
+field string --fieldName pageNumber
+field date --fieldName displayStart --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+field date --fieldName displayEnd --type java.util.Calendar --persistenceType JPA_TIMESTAMP
+// script --file /Users/sjacob/Documents/projects/workspace/expres.roo
+repository jpa --all
+finder add --entity model:~.Exhibition --name findByTitle
+finder add --entity model:~.Request --name findByRequestor
+finder add --entity model:~.CollectionItem --name findByTitle
+service --all
+web mvc setup
+web mvc controller --all --responseType JSON --pathPrefix /api
+web mvc view setup --type THYMELEAF
+web mvc templates setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+web mvc detail --all --views show --responseType THYMELEAF
+web mvc finder --all --responseType THYMELEAF
+security setup --provider SPRINGLETS_JPA
+jpa audit setup
+jpa audit add ---entity model:~.Exhibition
+jpa audit add ---entity model:~.ExhibitionItem
+jpa audit add ---entity model:~.Venue
+jpa audit add ---entity model:~.Loan
+jpa audit add ---entity model:~.LoanItem
+jpa audit add ---entity model:~.Contact
+jpa audit add ---entity model:~.CollectionItem
+jpa audit add ---entity model:~.DigitalObject
+jpa audit add ---entity model:~.ResearchDocument
+jpa audit add ---entity model:~.Movement
+jpa audit add ---entity model:~.TreatementItem
+jpa audit add ---entity model:~.Treatment
+jpa audit add ---entity model:~.Request
+jpa audit add ---entity model:~.PageOpening
+// script --file /Users/sjacob/Documents/projects/workspace/expres2.roo
+// Spring Roo 2.0.0.RC2 [rev 76d128f] log closed at 2018-01-12 15:54:55

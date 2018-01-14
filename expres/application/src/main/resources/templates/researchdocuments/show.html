@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_researchdocument})}|">Show ResearchDocument - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${researchDocument}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_researchdocument})}">Show ResearchDocument</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_researchdocument})}">ResearchDocument data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="researchdocument-exhibition-field" data-z="3318dce1">
+            	      <strong data-th-text="#{label_researchdocument_exhibition}">exhibition</strong>
+                    <span data-th-text="*{{exhibition}}">exhibitionValue</span>
+         	        </li>
+                  <li id="researchdocument-rditem-field" data-z="6f4cd341">
+            	      <strong data-th-text="#{label_researchdocument_rditem}">rdItem</strong>
+                    <span data-th-text="*{{rdItem}}">rdItemValue</span>
+         	        </li>
+                  <li id="researchdocument-title-field" data-z="8c7fadbd">
+            	      <strong data-th-text="#{label_researchdocument_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="researchdocument-author-field" data-z="efacd661">
+            	      <strong data-th-text="#{label_researchdocument_author}">author</strong>
+                    <span data-th-text="*{{author}}">authorValue</span>
+         	        </li>
+                  <li id="researchdocument-yearpublished-field" data-z="2c187c7d">
+            	      <strong data-th-text="#{label_researchdocument_yearpublished}">yearPublished</strong>
+                    <span data-th-text="*{{yearPublished}}">yearPublishedValue</span>
+         	        </li>
+                  <li id="researchdocument-format-field" data-z="b4abb8e1">
+            	      <strong data-th-text="#{label_researchdocument_format}">format</strong>
+                    <span data-th-text="*{{format}}">formatValue</span>
+         	        </li>
+                  <li id="researchdocument-document-field" data-z="bf78d3e1">
+            	      <strong data-th-text="#{label_researchdocument_document}">document</strong>
+                    <span data-th-text="*{{document}}">documentValue</span>
+         	        </li>
+                  <li id="researchdocument-referenceurl-field" data-z="50f2a1a1">
+            	      <strong data-th-text="#{label_researchdocument_referenceurl}">referenceUrl</strong>
+                    <span data-th-text="*{{referenceUrl}}">referenceUrlValue</span>
+         	        </li>
+                  <li id="researchdocument-createddate-field" data-z="55b14b9d">
+            	      <strong data-th-text="#{label_researchdocument_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="researchdocument-createdby-field" data-z="765d81fd">
+            	      <strong data-th-text="#{label_researchdocument_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="researchdocument-modifieddate-field" data-z="ce745381">
+            	      <strong data-th-text="#{label_researchdocument_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="researchdocument-modifiedby-field" data-z="7b4932e1">
+            	      <strong data-th-text="#{label_researchdocument_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="ResearchDocument_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('ResearchDocumentsItemThymeleafController').to('editForm').with('researchDocument', researchDocument.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="ResearchDocument_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ResearchDocumentsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

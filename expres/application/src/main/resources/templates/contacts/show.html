@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_contact})}|">Show Contact - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${contact}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_contact})}">Show Contact</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_contact})}">Contact data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="contact-type-field" data-z="deb57a35">
+            	      <strong data-th-text="#{label_contact_type}">type</strong>
+                    <span data-th-text="*{{type}}">typeValue</span>
+         	        </li>
+                  <li id="contact-title-field" data-z="dbfc2709">
+            	      <strong data-th-text="#{label_contact_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="contact-firstname-field" data-z="d0c75dc9">
+            	      <strong data-th-text="#{label_contact_firstname}">firstName</strong>
+                    <span data-th-text="*{{firstName}}">firstNameValue</span>
+         	        </li>
+                  <li id="contact-lastname-field" data-z="80c92a75">
+            	      <strong data-th-text="#{label_contact_lastname}">lastName</strong>
+                    <span data-th-text="*{{lastName}}">lastNameValue</span>
+         	        </li>
+                  <li id="contact-address-field" data-z="a642a109">
+            	      <strong data-th-text="#{label_contact_address}">address</strong>
+                    <span data-th-text="*{{address}}">addressValue</span>
+         	        </li>
+                  <li id="contact-suburb-field" data-z="76ce3b55">
+            	      <strong data-th-text="#{label_contact_suburb}">suburb</strong>
+                    <span data-th-text="*{{suburb}}">suburbValue</span>
+         	        </li>
+                  <li id="contact-addressstate-field" data-z="e743ebb5">
+            	      <strong data-th-text="#{label_contact_addressstate}">addressState</strong>
+                    <span data-th-text="*{{addressState}}">addressStateValue</span>
+         	        </li>
+                  <li id="contact-country-field" data-z="f539b4c9">
+            	      <strong data-th-text="#{label_contact_country}">country</strong>
+                    <span data-th-text="*{{country}}">countryValue</span>
+         	        </li>
+                  <li id="contact-postcode-field" data-z="911160d5">
+            	      <strong data-th-text="#{label_contact_postcode}">postcode</strong>
+                    <span data-th-text="*{{postcode}}">postcodeValue</span>
+         	        </li>
+                  <li id="contact-email-field" data-z="aedc0e89">
+            	      <strong data-th-text="#{label_contact_email}">email</strong>
+                    <span data-th-text="*{{email}}">emailValue</span>
+         	        </li>
+                  <li id="contact-fax-field" data-z="697184e9">
+            	      <strong data-th-text="#{label_contact_fax}">fax</strong>
+                    <span data-th-text="*{{fax}}">faxValue</span>
+         	        </li>
+                  <li id="contact-homephone-field" data-z="4c750309">
+            	      <strong data-th-text="#{label_contact_homephone}">homePhone</strong>
+                    <span data-th-text="*{{homePhone}}">homePhoneValue</span>
+         	        </li>
+                  <li id="contact-workphone-field" data-z="ef919949">
+            	      <strong data-th-text="#{label_contact_workphone}">workPhone</strong>
+                    <span data-th-text="*{{workPhone}}">workPhoneValue</span>
+         	        </li>
+                  <li id="contact-mobilephone-field" data-z="5f7930e9">
+            	      <strong data-th-text="#{label_contact_mobilephone}">mobilePhone</strong>
+                    <span data-th-text="*{{mobilePhone}}">mobilePhoneValue</span>
+         	        </li>
+                  <li id="contact-otherphone-field" data-z="cee0d515">
+            	      <strong data-th-text="#{label_contact_otherphone}">otherPhone</strong>
+                    <span data-th-text="*{{otherPhone}}">otherPhoneValue</span>
+         	        </li>
+                  <li id="contact-contactrole-field" data-z="50b55be9">
+            	      <strong data-th-text="#{label_contact_contactrole}">contactRole</strong>
+                    <span data-th-text="*{{contactRole}}">contactRoleValue</span>
+         	        </li>
+                  <li id="contact-contactposition-field" data-z="7ac8dc89">
+            	      <strong data-th-text="#{label_contact_contactposition}">contactPosition</strong>
+                    <span data-th-text="*{{contactPosition}}">contactPositionValue</span>
+         	        </li>
+                  <li id="contact-comments-field" data-z="7a720ff5">
+            	      <strong data-th-text="#{label_contact_comments}">comments</strong>
+                    <span data-th-text="*{{comments}}">commentsValue</span>
+         	        </li>
+                  <li id="contact-modifiedby-field" data-z="7560a915">
+            	      <strong data-th-text="#{label_contact_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+                  <li id="contact-createddate-field" data-z="9e889be9">
+            	      <strong data-th-text="#{label_contact_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="contact-createdby-field" data-z="55247549">
+            	      <strong data-th-text="#{label_contact_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="contact-modifieddate-field" data-z="a0870cb5">
+            	      <strong data-th-text="#{label_contact_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Contact_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('ContactsItemThymeleafController').to('editForm').with('contact', contact.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+          <!-- details -->
+        <hr>
+        <div id="details-level-1">
+            <ul class="nav nav-tabs" id="nav-tabs">
+                <li class="active">
+                  <a id="loans-detail-table-tab" data-toggle="tab" href="#detail-loans-detail" data-z="abf6e230">Loans</a>
+                </li>
+                <li class="active">
+                  <a id="venues-detail-table-tab" data-toggle="tab" href="#detail-venues-detail" data-z="f2d05f2">Venues</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="tab-content">
+              <div id="detail-loans-detail" class="tab-pane active">
+                <!--START DETAIL TABLE-->
+                <div class="table-responsive" data-th-with="detailCollectionLink=${@linkBuilder.of('ContactsItemLoansThymeleafController')},detailItemLink=${@linkBuilder.of('LoansItemThymeleafController')},id=*{{id}}">
+                    <table id="loans-detail-table" style="width: 99.7%" class="table table-striped table-hover table-bordered" data-datatables="true" data-row-id="id" data-z="abf6e230" data-order="[[ 1, &quot;asc&quot; ]]" data-data-load-url="${detailCollectionLink.to('datatables').with('contact', id)}" data-data-show-url="${detailItemLink.to('show').with('loan', '_ID_')}" data-data-edit-url="${detailItemLink.to('editForm').with('loan', '_ID_')}" data-data-create-url="${detailCollectionLink.to('createForm').with('contact', id)}" data-data-delete-url="${detailCollectionLink.to('removeFromLoans').with('contact', id).with('loansToRemove', '_ID_')}" data-data-delete-batch-url="${detailCollectionLink.to('removeFromLoansBatch').with('contact', id).with('loansToRemove', '_ID_')}">
+                      <caption class="sr-only" data-th-text="#{label_list_of_entity(#{label_contact_loans})}">Loans List</caption>
+                      <thead>
+                        <tr>
+                          <th data-data="id" data-checkboxes="true"></th>
+                              <th data-data="loanNo" data-th-text="#{label_contact_loans_loanno}">loanNo</th>
+                              <th data-data="hprmFileNumber" data-th-text="#{label_contact_loans_hprmfilenumber}">hprmFileNumber</th>
+                              <th data-data="loanType" data-th-text="#{label_contact_loans_loantype}">loanType</th>
+                              <th data-data="reasonForLoan" data-th-text="#{label_contact_loans_reasonforloan}">reasonForLoan</th>
+                              <th data-data="startDate" data-th-text="#{label_contact_loans_startdate}">startDate</th>
+                              <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
+                        </tr>
+                      </thead>
+                      <tbody data-th-remove="all">
+                        <tr>
+                              <td>loanNo</td>
+                              <td>hprmFileNumber</td>
+                              <td>loanType</td>
+                              <td>reasonForLoan</td>
+                              <td>startDate</td>
+                          <td data-th-text="#{label_tools}">Tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- content replaced by modal-confirm fragment of modal-confirm.html -->
+                    <div data-th-replace="~{fragments/modal-confirm-delete :: modalConfirmDelete(tableId='loans-detail-table',
+                        title=#{label_delete_entity(#{label_contact_loans})}, message=#{info_delete_item_confirm}, content=~{/contacts/loans/listDeleteModal :: loans-detailModalConfirmBody})}">
+                    </div>
+                   <div data-th-replace="~{fragments/modal-confirm-delete-batch :: modalConfirmDeleteBatch(tableId='loans-detail-table',
+                        title=#{label_delete_entity(#{label_contact_loans})}, message=#{info_delete_batch_confirm}, content=~{/contacts/loans/listDeleteModalBatch :: loans-detailModalConfirmBody})}">
+                    </div>
+                    <div data-th-replace="~{fragments/modal-export-empty-error :: modalExportEmptyError(tableId='loans-detail-table',
+                        title=#{label_export_empty_error(#{label_contact_loans})}, message=#{info_export_empty_error})}">
+                    </div>
+                </div> <!--/table-responsive">
+                <!--END TABLE-->
+              </div> <!--/tab-pane -->
+              <div id="detail-venues-detail" class="tab-pane">
+                <!--START DETAIL TABLE-->
+                <div class="table-responsive" data-th-with="detailCollectionLink=${@linkBuilder.of('ContactsItemVenuesThymeleafController')},detailItemLink=${@linkBuilder.of('VenuesItemThymeleafController')},id=*{{id}}">
+                    <table id="venues-detail-table" style="width: 99.7%" class="table table-striped table-hover table-bordered" data-datatables="true" data-row-id="id" data-z="f2d05f2" data-order="[[ 1, &quot;asc&quot; ]]" data-data-load-url="${detailCollectionLink.to('datatables').with('contact', id)}" data-data-show-url="${detailItemLink.to('show').with('venue', '_ID_')}" data-data-edit-url="${detailItemLink.to('editForm').with('venue', '_ID_')}" data-data-create-url="${detailCollectionLink.to('createForm').with('contact', id)}" data-data-delete-url="${detailCollectionLink.to('removeFromVenues').with('contact', id).with('venuesToRemove', '_ID_')}" data-data-delete-batch-url="${detailCollectionLink.to('removeFromVenuesBatch').with('contact', id).with('venuesToRemove', '_ID_')}">
+                      <caption class="sr-only" data-th-text="#{label_list_of_entity(#{label_contact_venues})}">Venues List</caption>
+                      <thead>
+                        <tr>
+                          <th data-data="id" data-checkboxes="true"></th>
+                              <th data-data="name" data-th-text="#{label_contact_venues_name}">name</th>
+                              <th data-data="startDate" data-th-text="#{label_contact_venues_startdate}">startDate</th>
+                              <th data-data="endDate" data-th-text="#{label_contact_venues_enddate}">endDate</th>
+                              <th data-data="venueContact" data-th-text="#{label_contact_venues_venuecontact}">venueContact</th>
+                              <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
+                        </tr>
+                      </thead>
+                      <tbody data-th-remove="all">
+                        <tr>
+                              <td>name</td>
+                              <td>startDate</td>
+                              <td>endDate</td>
+                              <td>venueContact</td>
+                          <td data-th-text="#{label_tools}">Tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- content replaced by modal-confirm fragment of modal-confirm.html -->
+                    <div data-th-replace="~{fragments/modal-confirm-delete :: modalConfirmDelete(tableId='venues-detail-table',
+                        title=#{label_delete_entity(#{label_contact_venues})}, message=#{info_delete_item_confirm}, content=~{/contacts/venues/listDeleteModal :: venues-detailModalConfirmBody})}">
+                    </div>
+                   <div data-th-replace="~{fragments/modal-confirm-delete-batch :: modalConfirmDeleteBatch(tableId='venues-detail-table',
+                        title=#{label_delete_entity(#{label_contact_venues})}, message=#{info_delete_batch_confirm}, content=~{/contacts/venues/listDeleteModalBatch :: venues-detailModalConfirmBody})}">
+                    </div>
+                    <div data-th-replace="~{fragments/modal-export-empty-error :: modalExportEmptyError(tableId='venues-detail-table',
+                        title=#{label_export_empty_error(#{label_contact_venues})}, message=#{info_export_empty_error})}">
+                    </div>
+                </div> <!--/table-responsive">
+                <!--END TABLE-->
+              </div> <!--/tab-pane -->
+            </div> <!--/tab-content-->
+        </div>
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Contact_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ContactsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </hr></div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

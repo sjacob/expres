@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="venue-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('VenuesCollectionThymeleafController')},itemLink=${@linkBuilder.of('VenuesItemThymeleafController')}">
+    <table id="venue-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="name" data-th-text="#{label_venue_name}">name</th>
+          <th data-data="startDate" data-th-text="#{label_venue_startdate}">startDate</th>
+          <th data-data="endDate" data-th-text="#{label_venue_enddate}">endDate</th>
+          <th data-data="venueContact" data-th-text="#{label_venue_venuecontact}">venueContact</th>
+          <th data-data="createdDate" data-th-text="#{label_venue_createddate}">createdDate</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>name</td>
+          <td>startDate</td>
+          <td>endDate</td>
+          <td>venueContact</td>
+          <td>createdDate</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

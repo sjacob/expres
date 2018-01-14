@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_exhibition})}|">Show Exhibition - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${exhibition}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_exhibition})}">Show Exhibition</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_exhibition})}">Exhibition data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="exhibition-title-field" data-z="112c2d44">
+            	      <strong data-th-text="#{label_exhibition_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="exhibition-curator-field" data-z="90749844">
+            	      <strong data-th-text="#{label_exhibition_curator}">curator</strong>
+                    <span data-th-text="*{{curator}}">curatorValue</span>
+         	        </li>
+                  <li id="exhibition-filenumber-field" data-z="fbfe771a">
+            	      <strong data-th-text="#{label_exhibition_filenumber}">fileNumber</strong>
+                    <span data-th-text="*{{fileNumber}}">fileNumberValue</span>
+         	        </li>
+                  <li id="exhibition-startdate-field" data-z="ae5367e4">
+            	      <strong data-th-text="#{label_exhibition_startdate}">startDate</strong>
+                    <span data-th-text="*{{startDate}}">startDateValue</span>
+         	        </li>
+                  <li id="exhibition-enddate-field" data-z="106c6204">
+            	      <strong data-th-text="#{label_exhibition_enddate}">endDate</strong>
+                    <span data-th-text="*{{endDate}}">endDateValue</span>
+         	        </li>
+                  <li id="exhibition-createddate-field" data-z="c62bc9e4">
+            	      <strong data-th-text="#{label_exhibition_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="exhibition-createdby-field" data-z="ca20e604">
+            	      <strong data-th-text="#{label_exhibition_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="exhibition-modifieddate-field" data-z="6d499e1a">
+            	      <strong data-th-text="#{label_exhibition_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="exhibition-modifiedby-field" data-z="9ff24fba">
+            	      <strong data-th-text="#{label_exhibition_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Exhibition_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('ExhibitionsItemThymeleafController').to('editForm').with('exhibition', exhibition.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+          <!-- details -->
+        <hr>
+        <div id="details-level-1">
+            <ul class="nav nav-tabs" id="nav-tabs">
+                <li class="active">
+                  <a id="exhibitionitems-detail-table-tab" data-toggle="tab" href="#detail-exhibitionitems-detail" data-z="5086c7ac">ExhibitionItems</a>
+                </li>
+                <li class="active">
+                  <a id="researchdocuments-detail-table-tab" data-toggle="tab" href="#detail-researchdocuments-detail" data-z="8fdd1404">ResearchDocuments</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="tab-content">
+              <div id="detail-exhibitionitems-detail" class="tab-pane active">
+                <!--START DETAIL TABLE-->
+                <div class="table-responsive" data-th-with="detailCollectionLink=${@linkBuilder.of('ExhibitionsItemExhibitionItemsThymeleafController')},detailItemLink=${@linkBuilder.of('ExhibitionItemsItemThymeleafController')},id=*{{id}}">
+                    <table id="exhibitionitems-detail-table" style="width: 99.7%" class="table table-striped table-hover table-bordered" data-datatables="true" data-row-id="id" data-z="5086c7ac" data-order="[[ 1, &quot;asc&quot; ]]" data-data-load-url="${detailCollectionLink.to('datatables').with('exhibition', id)}" data-data-show-url="${detailItemLink.to('show').with('exhibitionItem', '_ID_')}" data-data-edit-url="${detailItemLink.to('editForm').with('exhibitionItem', '_ID_')}" data-data-create-url="${detailCollectionLink.to('createForm').with('exhibition', id)}" data-data-delete-url="${detailCollectionLink.to('removeFromExhibitionItems').with('exhibition', id).with('exhibitionItemsToRemove', '_ID_')}" data-data-delete-batch-url="${detailCollectionLink.to('removeFromExhibitionItemsBatch').with('exhibition', id).with('exhibitionItemsToRemove', '_ID_')}">
+                      <caption class="sr-only" data-th-text="#{label_list_of_entity(#{label_exhibition_exhibitionitems})}">ExhibitionItems List</caption>
+                      <thead>
+                        <tr>
+                          <th data-data="id" data-checkboxes="true"></th>
+                              <th data-data="exhibition" data-th-text="#{label_exhibition_exhibitionitems_exhibition}">exhibition</th>
+                              <th data-data="display" data-th-text="#{label_exhibition_exhibitionitems_display}">display</th>
+                              <th data-data="galleryPlacement" data-th-text="#{label_exhibition_exhibitionitems_galleryplacement}">galleryPlacement</th>
+                              <th data-data="galleryReferenceNumber" data-th-text="#{label_exhibition_exhibitionitems_galleryreferencenumber}">galleryReferenceNumber</th>
+                              <th data-data="relatedItems" data-th-text="#{label_exhibition_exhibitionitems_relateditems}">relatedItems</th>
+                              <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
+                        </tr>
+                      </thead>
+                      <tbody data-th-remove="all">
+                        <tr>
+                              <td>exhibition</td>
+                              <td>display</td>
+                              <td>galleryPlacement</td>
+                              <td>galleryReferenceNumber</td>
+                              <td>relatedItems</td>
+                          <td data-th-text="#{label_tools}">Tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- content replaced by modal-confirm fragment of modal-confirm.html -->
+                    <div data-th-replace="~{fragments/modal-confirm-delete :: modalConfirmDelete(tableId='exhibitionitems-detail-table',
+                        title=#{label_delete_entity(#{label_exhibition_exhibitionitems})}, message=#{info_delete_item_confirm}, content=~{/exhibitions/exhibitionItems/listDeleteModal :: exhibitionitems-detailModalConfirmBody})}">
+                    </div>
+                   <div data-th-replace="~{fragments/modal-confirm-delete-batch :: modalConfirmDeleteBatch(tableId='exhibitionitems-detail-table',
+                        title=#{label_delete_entity(#{label_exhibition_exhibitionitems})}, message=#{info_delete_batch_confirm}, content=~{/exhibitions/exhibitionItems/listDeleteModalBatch :: exhibitionitems-detailModalConfirmBody})}">
+                    </div>
+                    <div data-th-replace="~{fragments/modal-export-empty-error :: modalExportEmptyError(tableId='exhibitionitems-detail-table',
+                        title=#{label_export_empty_error(#{label_exhibition_exhibitionitems})}, message=#{info_export_empty_error})}">
+                    </div>
+                </div> <!--/table-responsive">
+                <!--END TABLE-->
+              </div> <!--/tab-pane -->
+              <div id="detail-researchdocuments-detail" class="tab-pane">
+                <!--START DETAIL TABLE-->
+                <div class="table-responsive" data-th-with="detailCollectionLink=${@linkBuilder.of('ExhibitionsItemResearchDocumentsThymeleafController')},detailItemLink=${@linkBuilder.of('ResearchDocumentsItemThymeleafController')},id=*{{id}}">
+                    <table id="researchdocuments-detail-table" style="width: 99.7%" class="table table-striped table-hover table-bordered" data-datatables="true" data-row-id="id" data-z="8fdd1404" data-order="[[ 1, &quot;asc&quot; ]]" data-data-load-url="${detailCollectionLink.to('datatables').with('exhibition', id)}" data-data-show-url="${detailItemLink.to('show').with('researchDocument', '_ID_')}" data-data-edit-url="${detailItemLink.to('editForm').with('researchDocument', '_ID_')}" data-data-create-url="${detailCollectionLink.to('createForm').with('exhibition', id)}" data-data-delete-url="${detailCollectionLink.to('removeFromResearchDocuments').with('exhibition', id).with('researchDocumentsToRemove', '_ID_')}" data-data-delete-batch-url="${detailCollectionLink.to('removeFromResearchDocumentsBatch').with('exhibition', id).with('researchDocumentsToRemove', '_ID_')}">
+                      <caption class="sr-only" data-th-text="#{label_list_of_entity(#{label_exhibition_researchdocuments})}">ResearchDocuments List</caption>
+                      <thead>
+                        <tr>
+                          <th data-data="id" data-checkboxes="true"></th>
+                              <th data-data="exhibition" data-th-text="#{label_exhibition_researchdocuments_exhibition}">exhibition</th>
+                              <th data-data="rdItem" data-th-text="#{label_exhibition_researchdocuments_rditem}">rdItem</th>
+                              <th data-data="title" data-th-text="#{label_exhibition_researchdocuments_title}">title</th>
+                              <th data-data="author" data-th-text="#{label_exhibition_researchdocuments_author}">author</th>
+                              <th data-data="yearPublished" data-th-text="#{label_exhibition_researchdocuments_yearpublished}">yearPublished</th>
+                              <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
+                        </tr>
+                      </thead>
+                      <tbody data-th-remove="all">
+                        <tr>
+                              <td>exhibition</td>
+                              <td>rdItem</td>
+                              <td>title</td>
+                              <td>author</td>
+                              <td>yearPublished</td>
+                          <td data-th-text="#{label_tools}">Tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- content replaced by modal-confirm fragment of modal-confirm.html -->
+                    <div data-th-replace="~{fragments/modal-confirm-delete :: modalConfirmDelete(tableId='researchdocuments-detail-table',
+                        title=#{label_delete_entity(#{label_exhibition_researchdocuments})}, message=#{info_delete_item_confirm}, content=~{/exhibitions/researchDocuments/listDeleteModal :: researchdocuments-detailModalConfirmBody})}">
+                    </div>
+                   <div data-th-replace="~{fragments/modal-confirm-delete-batch :: modalConfirmDeleteBatch(tableId='researchdocuments-detail-table',
+                        title=#{label_delete_entity(#{label_exhibition_researchdocuments})}, message=#{info_delete_batch_confirm}, content=~{/exhibitions/researchDocuments/listDeleteModalBatch :: researchdocuments-detailModalConfirmBody})}">
+                    </div>
+                    <div data-th-replace="~{fragments/modal-export-empty-error :: modalExportEmptyError(tableId='researchdocuments-detail-table',
+                        title=#{label_export_empty_error(#{label_exhibition_researchdocuments})}, message=#{info_export_empty_error})}">
+                    </div>
+                </div> <!--/table-responsive">
+                <!--END TABLE-->
+              </div> <!--/tab-pane -->
+            </div> <!--/tab-content-->
+        </div>
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Exhibition_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ExhibitionsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </hr></div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

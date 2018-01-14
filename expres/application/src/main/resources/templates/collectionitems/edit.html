@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+  <head id="head">
+
+    <title data-th-text="#{label_edit_entity(#{label_collectionitem})}">
+    Edit CollectionItem - Spring Roo application</title>
+
+    <!-- DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/2.5.4/build/jquery.datetimepicker.min.css}" />
+
+  </head>
+  
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content">
+
+        <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('CollectionItemsCollectionThymeleafController')},itemLink=${@linkBuilder.of('CollectionItemsItemThymeleafController')}">
+
+          <h1 data-th-text="#{label_edit_entity(#{label_collectionitem})}">Edit CollectionItem</h1>
+
+          <!-- FORM -->
+          <form class="form-horizontal validate" method="POST" data-th-object="${collectionItem}" data-th-action="${itemLink.to('update').with('collectionItem', collectionItem.id)}">
+            <input type="hidden" name="_method" value="PUT" />
+            	<input type="hidden" name="version" data-th-value="*{version}" />
+
+            <!-- CONCURRENCY CONTROL -->
+            <div class="alert alert-warning" data-th-if="${concurrency}">
+              <h2 data-th-text="#{label_concurrency_title}">Warning! This record has been updated by an other user.</h2>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="apply"> <span data-th-text="#{label_concurrency_apply}">Apply my changes anyway</span> <i><span data-th-text="#{label_concurrency_apply_info}">(discard all the changes applied by the other users).</span></i>
+                </input></label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="discard" checked=""> <span data-th-text="#{label_concurrency_discard}">Discard all my changes and reload this record.</span>
+                </input></label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Accept</button>
+            </br></div>
+            <!-- /CONCURRENCY CONTROL -->
+
+             <fieldset id="containerFields">
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_collectionitem})}">CollectionItem data </legend>
+
+<div class="form-group has-error has-feedback" data-z="855c002" id="collectionitem-bibid-field" data-th-classappend="${#fields.hasErrors('bibId')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="bibId" class="col-md-3 control-label" data-th-text="#{label_collectionitem_bibid}">bibId</label>
+  <div class="col-md-6">
+    <input id="bibId" name="bibId" data-th-value="*{{bibId}}" type="text" class="form-control" placeholder="bibId" data-th-placeholder="#{label_collectionitem_bibid}" data-toggle="tooltip" aria-describedby="bibIdStatus" />
+      <span data-th-classappend="${#fields.hasErrors('bibId')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('bibId')}" aria-hidden="true"></span>
+      <span id="bibId-error" class="help-block" data-th-if="${#fields.hasErrors('bibId')}" data-th-errors="*{bibId}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="fa5e173c" id="collectionitem-callnumber-field" data-th-classappend="${#fields.hasErrors('callNumber')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="callNumber" class="col-md-3 control-label" data-th-text="#{label_collectionitem_callnumber}">callNumber</label>
+  <div class="col-md-6">
+    <input id="callNumber" name="callNumber" data-th-value="*{{callNumber}}" type="text" class="form-control" placeholder="callNumber" data-th-placeholder="#{label_collectionitem_callnumber}" data-toggle="tooltip" aria-describedby="callNumberStatus" />
+      <span data-th-classappend="${#fields.hasErrors('callNumber')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('callNumber')}" aria-hidden="true"></span>
+      <span id="callNumber-error" class="help-block" data-th-if="${#fields.hasErrors('callNumber')}" data-th-errors="*{callNumber}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="33f31b1c" id="collectionitem-copy-field" data-th-classappend="${#fields.hasErrors('copy')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="copy" class="col-md-3 control-label" data-th-text="#{label_collectionitem_copy}">copy</label>
+  <div class="col-md-6">
+    <input id="copy" name="copy" data-th-value="*{{copy}}" type="text" class="form-control" placeholder="copy" data-th-placeholder="#{label_collectionitem_copy}" data-toggle="tooltip" aria-describedby="copyStatus" />
+      <span data-th-classappend="${#fields.hasErrors('copy')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('copy')}" aria-hidden="true"></span>
+      <span id="copy-error" class="help-block" data-th-if="${#fields.hasErrors('copy')}" data-th-errors="*{copy}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="ad3f9d5c" id="collectionitem-archivespacenumber-field" data-th-classappend="${#fields.hasErrors('archiveSpaceNumber')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="archiveSpaceNumber" class="col-md-3 control-label" data-th-text="#{label_collectionitem_archivespacenumber}">archiveSpaceNumber</label>
+  <div class="col-md-6">
+    <input id="archiveSpaceNumber" name="archiveSpaceNumber" data-th-value="*{{archiveSpaceNumber}}" type="text" class="form-control" placeholder="archiveSpaceNumber" data-th-placeholder="#{label_collectionitem_archivespacenumber}" data-toggle="tooltip" aria-describedby="archiveSpaceNumberStatus" />
+      <span data-th-classappend="${#fields.hasErrors('archiveSpaceNumber')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('archiveSpaceNumber')}" aria-hidden="true"></span>
+      <span id="archiveSpaceNumber-error" class="help-block" data-th-if="${#fields.hasErrors('archiveSpaceNumber')}" data-th-errors="*{archiveSpaceNumber}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="512548dc" id="collectionitem-specialcollectionspapers-field" data-th-classappend="${#fields.hasErrors('specialCollectionsPapers')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="specialCollectionsPapers" class="col-md-3 control-label" data-th-text="#{label_collectionitem_specialcollectionspapers}">specialCollectionsPapers</label>
+  <div class="col-md-6">
+    <input id="specialCollectionsPapers" name="specialCollectionsPapers" data-th-value="*{{specialCollectionsPapers}}" type="text" class="form-control" placeholder="specialCollectionsPapers" data-th-placeholder="#{label_collectionitem_specialcollectionspapers}" data-toggle="tooltip" aria-describedby="specialCollectionsPapersStatus" />
+      <span data-th-classappend="${#fields.hasErrors('specialCollectionsPapers')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('specialCollectionsPapers')}" aria-hidden="true"></span>
+      <span id="specialCollectionsPapers-error" class="help-block" data-th-if="${#fields.hasErrors('specialCollectionsPapers')}" data-th-errors="*{specialCollectionsPapers}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="427ac69c" id="collectionitem-hprmnumber-field" data-th-classappend="${#fields.hasErrors('hprmNumber')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hprmNumber" class="col-md-3 control-label" data-th-text="#{label_collectionitem_hprmnumber}">hprmNumber</label>
+  <div class="col-md-6">
+    <input id="hprmNumber" name="hprmNumber" data-th-value="*{{hprmNumber}}" type="text" class="form-control" placeholder="hprmNumber" data-th-placeholder="#{label_collectionitem_hprmnumber}" data-toggle="tooltip" aria-describedby="hprmNumberStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hprmNumber')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hprmNumber')}" aria-hidden="true"></span>
+      <span id="hprmNumber-error" class="help-block" data-th-if="${#fields.hasErrors('hprmNumber')}" data-th-errors="*{hprmNumber}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="55c9faa2" id="collectionitem-barcodenumber-field" data-th-classappend="${#fields.hasErrors('barcodeNumber')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="barcodeNumber" class="col-md-3 control-label" data-th-text="#{label_collectionitem_barcodenumber}">barcodeNumber</label>
+  <div class="col-md-6">
+    <input id="barcodeNumber" name="barcodeNumber" data-th-value="*{{barcodeNumber}}" type="text" class="form-control" placeholder="barcodeNumber" data-th-placeholder="#{label_collectionitem_barcodenumber}" data-toggle="tooltip" aria-describedby="barcodeNumberStatus" />
+      <span data-th-classappend="${#fields.hasErrors('barcodeNumber')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('barcodeNumber')}" aria-hidden="true"></span>
+      <span id="barcodeNumber-error" class="help-block" data-th-if="${#fields.hasErrors('barcodeNumber')}" data-th-errors="*{barcodeNumber}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="c78edfdc" id="collectionitem-persistentidentifier-field" data-th-classappend="${#fields.hasErrors('persistentIdentifier')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="persistentIdentifier" class="col-md-3 control-label" data-th-text="#{label_collectionitem_persistentidentifier}">persistentIdentifier</label>
+  <div class="col-md-6">
+    <input id="persistentIdentifier" name="persistentIdentifier" data-th-value="*{{persistentIdentifier}}" type="text" class="form-control" placeholder="persistentIdentifier" data-th-placeholder="#{label_collectionitem_persistentidentifier}" data-toggle="tooltip" aria-describedby="persistentIdentifierStatus" />
+      <span data-th-classappend="${#fields.hasErrors('persistentIdentifier')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('persistentIdentifier')}" aria-hidden="true"></span>
+      <span id="persistentIdentifier-error" class="help-block" data-th-if="${#fields.hasErrors('persistentIdentifier')}" data-th-errors="*{persistentIdentifier}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="29dea03c" id="collectionitem-collection-field" data-th-classappend="${#fields.hasErrors('collection')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="collection" class="col-md-3 control-label" data-th-text="#{label_collectionitem_collection}">collection</label>
+  <div class="col-md-6">
+    <input id="collection" name="collection" data-th-value="*{{collection}}" type="text" class="form-control" placeholder="collection" data-th-placeholder="#{label_collectionitem_collection}" data-toggle="tooltip" aria-describedby="collectionStatus" />
+      <span data-th-classappend="${#fields.hasErrors('collection')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('collection')}" aria-hidden="true"></span>
+      <span id="collection-error" class="help-block" data-th-if="${#fields.hasErrors('collection')}" data-th-errors="*{collection}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="e052f3a2" id="collectionitem-title-field" data-th-classappend="${#fields.hasErrors('title')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="title" class="col-md-3 control-label" data-th-text="#{label_collectionitem_title}">title</label>
+  <div class="col-md-6">
+    <input id="title" name="title" data-th-value="*{{title}}" type="text" class="form-control" placeholder="title" data-th-placeholder="#{label_collectionitem_title}" data-toggle="tooltip" aria-describedby="titleStatus" />
+      <span data-th-classappend="${#fields.hasErrors('title')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('title')}" aria-hidden="true"></span>
+      <span id="title-error" class="help-block" data-th-if="${#fields.hasErrors('title')}" data-th-errors="*{title}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="94cd0462" id="collectionitem-creator-field" data-th-classappend="${#fields.hasErrors('creator')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="creator" class="col-md-3 control-label" data-th-text="#{label_collectionitem_creator}">creator</label>
+  <div class="col-md-6">
+    <input id="creator" name="creator" data-th-value="*{{creator}}" type="text" class="form-control" placeholder="creator" data-th-placeholder="#{label_collectionitem_creator}" data-toggle="tooltip" aria-describedby="creatorStatus" />
+      <span data-th-classappend="${#fields.hasErrors('creator')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('creator')}" aria-hidden="true"></span>
+      <span id="creator-error" class="help-block" data-th-if="${#fields.hasErrors('creator')}" data-th-errors="*{creator}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="236c593c" id="collectionitem-dateofitem-field" data-th-classappend="${#fields.hasErrors('dateOfItem')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="dateOfItem" class="col-md-3 control-label" data-th-text="#{label_collectionitem_dateofitem}">dateOfItem</label>
+  <div class="col-md-6">
+    <input id="dateOfItem" name="dateOfItem" data-th-value="*{{dateOfItem}}" type="text" class="form-control" placeholder="dateOfItem" data-th-placeholder="#{label_collectionitem_dateofitem}" data-toggle="tooltip" aria-describedby="dateOfItemStatus" />
+      <span data-th-classappend="${#fields.hasErrors('dateOfItem')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('dateOfItem')}" aria-hidden="true"></span>
+      <span id="dateOfItem-error" class="help-block" data-th-if="${#fields.hasErrors('dateOfItem')}" data-th-errors="*{dateOfItem}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="89a045bc" id="collectionitem-itemtype-field" data-th-classappend="${#fields.hasErrors('itemType')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="itemType" class="col-md-3 control-label" data-th-text="#{label_collectionitem_itemtype}">itemType</label>
+  <div class="col-md-6">
+    <input id="itemType" name="itemType" data-th-value="*{{itemType}}" type="text" class="form-control" placeholder="itemType" data-th-placeholder="#{label_collectionitem_itemtype}" data-toggle="tooltip" aria-describedby="itemTypeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('itemType')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('itemType')}" aria-hidden="true"></span>
+      <span id="itemType-error" class="help-block" data-th-if="${#fields.hasErrors('itemType')}" data-th-errors="*{itemType}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="e107c562" id="collectionitem-inscription-field" data-th-classappend="${#fields.hasErrors('inscription')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="inscription" class="col-md-3 control-label" data-th-text="#{label_collectionitem_inscription}">inscription</label>
+  <div class="col-md-6">
+    <input id="inscription" name="inscription" data-th-value="*{{inscription}}" type="text" class="form-control" placeholder="inscription" data-th-placeholder="#{label_collectionitem_inscription}" data-toggle="tooltip" aria-describedby="inscriptionStatus" />
+      <span data-th-classappend="${#fields.hasErrors('inscription')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('inscription')}" aria-hidden="true"></span>
+      <span id="inscription-error" class="help-block" data-th-if="${#fields.hasErrors('inscription')}" data-th-errors="*{inscription}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="e5f60d3c" id="collectionitem-originallanguage-field" data-th-classappend="${#fields.hasErrors('originalLanguage')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="originalLanguage" class="col-md-3 control-label" data-th-text="#{label_collectionitem_originallanguage}">originalLanguage</label>
+  <div class="col-md-6">
+    <input id="originalLanguage" name="originalLanguage" data-th-value="*{{originalLanguage}}" type="text" class="form-control" placeholder="originalLanguage" data-th-placeholder="#{label_collectionitem_originallanguage}" data-toggle="tooltip" aria-describedby="originalLanguageStatus" />
+      <span data-th-classappend="${#fields.hasErrors('originalLanguage')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('originalLanguage')}" aria-hidden="true"></span>
+      <span id="originalLanguage-error" class="help-block" data-th-if="${#fields.hasErrors('originalLanguage')}" data-th-errors="*{originalLanguage}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="9b0cb5a2" id="collectionitem-publisher-field" data-th-classappend="${#fields.hasErrors('publisher')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="publisher" class="col-md-3 control-label" data-th-text="#{label_collectionitem_publisher}">publisher</label>
+  <div class="col-md-6">
+    <input id="publisher" name="publisher" data-th-value="*{{publisher}}" type="text" class="form-control" placeholder="publisher" data-th-placeholder="#{label_collectionitem_publisher}" data-toggle="tooltip" aria-describedby="publisherStatus" />
+      <span data-th-classappend="${#fields.hasErrors('publisher')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('publisher')}" aria-hidden="true"></span>
+      <span id="publisher-error" class="help-block" data-th-if="${#fields.hasErrors('publisher')}" data-th-errors="*{publisher}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="e68e403c" id="collectionitem-acquisitiondetails-field" data-th-classappend="${#fields.hasErrors('acquisitionDetails')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="acquisitionDetails" class="col-md-3 control-label" data-th-text="#{label_collectionitem_acquisitiondetails}">acquisitionDetails</label>
+  <div class="col-md-6">
+    <input id="acquisitionDetails" name="acquisitionDetails" data-th-value="*{{acquisitionDetails}}" type="text" class="form-control" placeholder="acquisitionDetails" data-th-placeholder="#{label_collectionitem_acquisitiondetails}" data-toggle="tooltip" aria-describedby="acquisitionDetailsStatus" />
+      <span data-th-classappend="${#fields.hasErrors('acquisitionDetails')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('acquisitionDetails')}" aria-hidden="true"></span>
+      <span id="acquisitionDetails-error" class="help-block" data-th-if="${#fields.hasErrors('acquisitionDetails')}" data-th-errors="*{acquisitionDetails}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="caee1fe2" id="collectionitem-copyrightstatus-field" data-th-classappend="${#fields.hasErrors('copyrightStatus')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="copyrightStatus" class="col-md-3 control-label" data-th-text="#{label_collectionitem_copyrightstatus}">copyrightStatus</label>
+  <div class="col-md-6">
+    <input id="copyrightStatus" name="copyrightStatus" data-th-value="*{{copyrightStatus}}" type="text" class="form-control" placeholder="copyrightStatus" data-th-placeholder="#{label_collectionitem_copyrightstatus}" data-toggle="tooltip" aria-describedby="copyrightStatusStatus" />
+      <span data-th-classappend="${#fields.hasErrors('copyrightStatus')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('copyrightStatus')}" aria-hidden="true"></span>
+      <span id="copyrightStatus-error" class="help-block" data-th-if="${#fields.hasErrors('copyrightStatus')}" data-th-errors="*{copyrightStatus}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="ba32dac2" id="collectionitem-researchnotes-field" data-th-classappend="${#fields.hasErrors('researchNotes')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="researchNotes" class="col-md-3 control-label" data-th-text="#{label_collectionitem_researchnotes}">researchNotes</label>
+  <div class="col-md-6">
+    <input id="researchNotes" name="researchNotes" data-th-value="*{{researchNotes}}" type="text" class="form-control" placeholder="researchNotes" data-th-placeholder="#{label_collectionitem_researchnotes}" data-toggle="tooltip" aria-describedby="researchNotesStatus" />
+      <span data-th-classappend="${#fields.hasErrors('researchNotes')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('researchNotes')}" aria-hidden="true"></span>
+      <span id="researchNotes-error" class="help-block" data-th-if="${#fields.hasErrors('researchNotes')}" data-th-errors="*{researchNotes}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="86f948dc" id="collectionitem-itemsize-field" data-th-classappend="${#fields.hasErrors('itemSize')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="itemSize" class="col-md-3 control-label" data-th-text="#{label_collectionitem_itemsize}">itemSize</label>
+  <div class="col-md-6">
+    <input id="itemSize" name="itemSize" data-th-value="*{{itemSize}}" type="text" class="form-control" placeholder="itemSize" data-th-placeholder="#{label_collectionitem_itemsize}" data-toggle="tooltip" aria-describedby="itemSizeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('itemSize')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('itemSize')}" aria-hidden="true"></span>
+      <span id="itemSize-error" class="help-block" data-th-if="${#fields.hasErrors('itemSize')}" data-th-errors="*{itemSize}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="e9cc37dc" id="collectionitem-medium-field" data-th-classappend="${#fields.hasErrors('medium')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="medium" class="col-md-3 control-label" data-th-text="#{label_collectionitem_medium}">medium</label>
+  <div class="col-md-6">
+    <input id="medium" name="medium" data-th-value="*{{medium}}" type="text" class="form-control" placeholder="medium" data-th-placeholder="#{label_collectionitem_medium}" data-toggle="tooltip" aria-describedby="mediumStatus" />
+      <span data-th-classappend="${#fields.hasErrors('medium')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('medium')}" aria-hidden="true"></span>
+      <span id="medium-error" class="help-block" data-th-if="${#fields.hasErrors('medium')}" data-th-errors="*{medium}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="2df93b22" id="collectionitem-descriptionphysical-field" data-th-classappend="${#fields.hasErrors('descriptionPhysical')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="descriptionPhysical" class="col-md-3 control-label" data-th-text="#{label_collectionitem_descriptionphysical}">descriptionPhysical</label>
+  <div class="col-md-6">
+    <input id="descriptionPhysical" name="descriptionPhysical" data-th-value="*{{descriptionPhysical}}" type="text" class="form-control" placeholder="descriptionPhysical" data-th-placeholder="#{label_collectionitem_descriptionphysical}" data-toggle="tooltip" aria-describedby="descriptionPhysicalStatus" />
+      <span data-th-classappend="${#fields.hasErrors('descriptionPhysical')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('descriptionPhysical')}" aria-hidden="true"></span>
+      <span id="descriptionPhysical-error" class="help-block" data-th-if="${#fields.hasErrors('descriptionPhysical')}" data-th-errors="*{descriptionPhysical}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="collectionitem-originalfordisplay-field" data-z="472a1dbc" data-th-classappend="${#fields.hasErrors('originalForDisplay')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label class="col-md-3 control-label" for="originalForDisplay" data-th-text="#{label_collectionitem_originalfordisplay}">originalForDisplay</label>
+  <div class="col-md-6">
+    <div class="checkbox">
+      <input type="checkbox" data-th-field="*{originalForDisplay}" data-th-title="#{label_requiredfield}" data-toggle="tooltip" />
+       <span data-th-classappend="${#fields.hasErrors('originalForDisplay')}? 'form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('originalForDisplay')}" aria-hidden="true"></span>
+        <span id="originalForDisplay-error" class="help-block" data-th-if="${#fields.hasErrors('originalForDisplay')}" data-th-errors="*{originalForDisplay}">Error message.</span>
+    </div>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="collectionitem-boundwithpageturns-field" data-z="5b129e3c" data-th-classappend="${#fields.hasErrors('boundWithPageTurns')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label class="col-md-3 control-label" for="boundWithPageTurns" data-th-text="#{label_collectionitem_boundwithpageturns}">boundWithPageTurns</label>
+  <div class="col-md-6">
+    <div class="checkbox">
+      <input type="checkbox" data-th-field="*{boundWithPageTurns}" data-th-title="#{label_requiredfield}" data-toggle="tooltip" />
+       <span data-th-classappend="${#fields.hasErrors('boundWithPageTurns')}? 'form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('boundWithPageTurns')}" aria-hidden="true"></span>
+        <span id="boundWithPageTurns-error" class="help-block" data-th-if="${#fields.hasErrors('boundWithPageTurns')}" data-th-errors="*{boundWithPageTurns}">Error message.</span>
+    </div>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="1a9e82e2" id="collectionitem-maximumheight-field" data-th-classappend="${#fields.hasErrors('maximumHeight')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="maximumHeight" class="col-md-3 control-label" data-th-text="#{label_collectionitem_maximumheight}">maximumHeight</label>
+  <div class="col-md-6">
+    <input id="maximumHeight" name="maximumHeight" data-th-value="*{{maximumHeight}}" type="text" class="form-control" placeholder="maximumHeight" data-th-placeholder="#{label_collectionitem_maximumheight}" data-toggle="tooltip" aria-describedby="maximumHeightStatus" />
+      <span data-th-classappend="${#fields.hasErrors('maximumHeight')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('maximumHeight')}" aria-hidden="true"></span>
+      <span id="maximumHeight-error" class="help-block" data-th-if="${#fields.hasErrors('maximumHeight')}" data-th-errors="*{maximumHeight}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="856f6d02" id="collectionitem-maximumanglepageopening-field" data-th-classappend="${#fields.hasErrors('maximumAnglePageOpening')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="maximumAnglePageOpening" class="col-md-3 control-label" data-th-text="#{label_collectionitem_maximumanglepageopening}">maximumAnglePageOpening</label>
+  <div class="col-md-6">
+    <input id="maximumAnglePageOpening" name="maximumAnglePageOpening" data-th-value="*{{maximumAnglePageOpening}}" type="text" class="form-control" placeholder="maximumAnglePageOpening" data-th-placeholder="#{label_collectionitem_maximumanglepageopening}" data-toggle="tooltip" aria-describedby="maximumAnglePageOpeningStatus" />
+      <span data-th-classappend="${#fields.hasErrors('maximumAnglePageOpening')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('maximumAnglePageOpening')}" aria-hidden="true"></span>
+      <span id="maximumAnglePageOpening-error" class="help-block" data-th-if="${#fields.hasErrors('maximumAnglePageOpening')}" data-th-errors="*{maximumAnglePageOpening}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="35ab8962" id="collectionitem-displayrecommendation-field" data-th-classappend="${#fields.hasErrors('displayRecommendation')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="displayRecommendation" class="col-md-3 control-label" data-th-text="#{label_collectionitem_displayrecommendation}">displayRecommendation</label>
+  <div class="col-md-6">
+    <input id="displayRecommendation" name="displayRecommendation" data-th-value="*{{displayRecommendation}}" type="text" class="form-control" placeholder="displayRecommendation" data-th-placeholder="#{label_collectionitem_displayrecommendation}" data-toggle="tooltip" aria-describedby="displayRecommendationStatus" />
+      <span data-th-classappend="${#fields.hasErrors('displayRecommendation')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('displayRecommendation')}" aria-hidden="true"></span>
+      <span id="displayRecommendation-error" class="help-block" data-th-if="${#fields.hasErrors('displayRecommendation')}" data-th-errors="*{displayRecommendation}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="a5aec1c2" id="collectionitem-externalframesize-field" data-th-classappend="${#fields.hasErrors('externalFrameSize')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="externalFrameSize" class="col-md-3 control-label" data-th-text="#{label_collectionitem_externalframesize}">externalFrameSize</label>
+  <div class="col-md-6">
+    <input id="externalFrameSize" name="externalFrameSize" data-th-value="*{{externalFrameSize}}" type="text" class="form-control" placeholder="externalFrameSize" data-th-placeholder="#{label_collectionitem_externalframesize}" data-toggle="tooltip" aria-describedby="externalFrameSizeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('externalFrameSize')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('externalFrameSize')}" aria-hidden="true"></span>
+      <span id="externalFrameSize-error" class="help-block" data-th-if="${#fields.hasErrors('externalFrameSize')}" data-th-errors="*{externalFrameSize}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="1a4a5002" id="collectionitem-internalframesize-field" data-th-classappend="${#fields.hasErrors('internalFrameSize')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="internalFrameSize" class="col-md-3 control-label" data-th-text="#{label_collectionitem_internalframesize}">internalFrameSize</label>
+  <div class="col-md-6">
+    <input id="internalFrameSize" name="internalFrameSize" data-th-value="*{{internalFrameSize}}" type="text" class="form-control" placeholder="internalFrameSize" data-th-placeholder="#{label_collectionitem_internalframesize}" data-toggle="tooltip" aria-describedby="internalFrameSizeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('internalFrameSize')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('internalFrameSize')}" aria-hidden="true"></span>
+      <span id="internalFrameSize-error" class="help-block" data-th-if="${#fields.hasErrors('internalFrameSize')}" data-th-errors="*{internalFrameSize}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="d514c21c" id="collectionitem-framingorientation-field" data-th-classappend="${#fields.hasErrors('framingOrientation')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="framingOrientation" class="col-md-3 control-label" data-th-text="#{label_collectionitem_framingorientation}">framingOrientation</label>
+  <div class="col-md-6">
+    <input id="framingOrientation" name="framingOrientation" data-th-value="*{{framingOrientation}}" type="text" class="form-control" placeholder="framingOrientation" data-th-placeholder="#{label_collectionitem_framingorientation}" data-toggle="tooltip" aria-describedby="framingOrientationStatus" />
+      <span data-th-classappend="${#fields.hasErrors('framingOrientation')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('framingOrientation')}" aria-hidden="true"></span>
+      <span id="framingOrientation-error" class="help-block" data-th-if="${#fields.hasErrors('framingOrientation')}" data-th-errors="*{framingOrientation}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="35484b82" id="collectionitem-framesize-field" data-th-classappend="${#fields.hasErrors('frameSize')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="frameSize" class="col-md-3 control-label" data-th-text="#{label_collectionitem_framesize}">frameSize</label>
+  <div class="col-md-6">
+    <input id="frameSize" name="frameSize" data-th-value="*{{frameSize}}" type="text" class="form-control" placeholder="frameSize" data-th-placeholder="#{label_collectionitem_framesize}" data-toggle="tooltip" aria-describedby="frameSizeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('frameSize')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('frameSize')}" aria-hidden="true"></span>
+      <span id="frameSize-error" class="help-block" data-th-if="${#fields.hasErrors('frameSize')}" data-th-errors="*{frameSize}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="d3e3c77c" id="collectionitem-displayrequestsforpreservation-field" data-th-classappend="${#fields.hasErrors('displayRequestsForPreservation')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="displayRequestsForPreservation" class="col-md-3 control-label" data-th-text="#{label_collectionitem_displayrequestsforpreservation}">displayRequestsForPreservation</label>
+  <div class="col-md-6">
+    <input id="displayRequestsForPreservation" name="displayRequestsForPreservation" data-th-value="*{{displayRequestsForPreservation}}" type="text" class="form-control" placeholder="displayRequestsForPreservation" data-th-placeholder="#{label_collectionitem_displayrequestsforpreservation}" data-toggle="tooltip" aria-describedby="displayRequestsForPreservationStatus" />
+      <span data-th-classappend="${#fields.hasErrors('displayRequestsForPreservation')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('displayRequestsForPreservation')}" aria-hidden="true"></span>
+      <span id="displayRequestsForPreservation-error" class="help-block" data-th-if="${#fields.hasErrors('displayRequestsForPreservation')}" data-th-errors="*{displayRequestsForPreservation}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="38a7241c" id="collectionitem-mattcolour-field" data-th-classappend="${#fields.hasErrors('mattColour')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="mattColour" class="col-md-3 control-label" data-th-text="#{label_collectionitem_mattcolour}">mattColour</label>
+  <div class="col-md-6">
+    <input id="mattColour" name="mattColour" data-th-value="*{{mattColour}}" type="text" class="form-control" placeholder="mattColour" data-th-placeholder="#{label_collectionitem_mattcolour}" data-toggle="tooltip" aria-describedby="mattColourStatus" />
+      <span data-th-classappend="${#fields.hasErrors('mattColour')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('mattColour')}" aria-hidden="true"></span>
+      <span id="mattColour-error" class="help-block" data-th-if="${#fields.hasErrors('mattColour')}" data-th-errors="*{mattColour}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="c3f939bc" id="collectionitem-framingnotes-field" data-th-classappend="${#fields.hasErrors('framingNotes')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="framingNotes" class="col-md-3 control-label" data-th-text="#{label_collectionitem_framingnotes}">framingNotes</label>
+  <div class="col-md-6">
+    <input id="framingNotes" name="framingNotes" data-th-value="*{{framingNotes}}" type="text" class="form-control" placeholder="framingNotes" data-th-placeholder="#{label_collectionitem_framingnotes}" data-toggle="tooltip" aria-describedby="framingNotesStatus" />
+      <span data-th-classappend="${#fields.hasErrors('framingNotes')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('framingNotes')}" aria-hidden="true"></span>
+      <span id="framingNotes-error" class="help-block" data-th-if="${#fields.hasErrors('framingNotes')}" data-th-errors="*{framingNotes}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="4e28ff62" id="collectionitem-supporttype-field" data-th-classappend="${#fields.hasErrors('supportType')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="supportType" class="col-md-3 control-label" data-th-text="#{label_collectionitem_supporttype}">supportType</label>
+  <div class="col-md-6">
+    <input id="supportType" name="supportType" data-th-value="*{{supportType}}" type="text" class="form-control" placeholder="supportType" data-th-placeholder="#{label_collectionitem_supporttype}" data-toggle="tooltip" aria-describedby="supportTypeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('supportType')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('supportType')}" aria-hidden="true"></span>
+      <span id="supportType-error" class="help-block" data-th-if="${#fields.hasErrors('supportType')}" data-th-errors="*{supportType}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="1de55e5c" id="collectionitem-supportnotes-field" data-th-classappend="${#fields.hasErrors('supportNotes')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="supportNotes" class="col-md-3 control-label" data-th-text="#{label_collectionitem_supportnotes}">supportNotes</label>
+  <div class="col-md-6">
+    <input id="supportNotes" name="supportNotes" data-th-value="*{{supportNotes}}" type="text" class="form-control" placeholder="supportNotes" data-th-placeholder="#{label_collectionitem_supportnotes}" data-toggle="tooltip" aria-describedby="supportNotesStatus" />
+      <span data-th-classappend="${#fields.hasErrors('supportNotes')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('supportNotes')}" aria-hidden="true"></span>
+      <span id="supportNotes-error" class="help-block" data-th-if="${#fields.hasErrors('supportNotes')}" data-th-errors="*{supportNotes}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="fcb02dc2" id="collectionitem-supportnumbercode-field" data-th-classappend="${#fields.hasErrors('supportNumberCode')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="supportNumberCode" class="col-md-3 control-label" data-th-text="#{label_collectionitem_supportnumbercode}">supportNumberCode</label>
+  <div class="col-md-6">
+    <input id="supportNumberCode" name="supportNumberCode" data-th-value="*{{supportNumberCode}}" type="text" class="form-control" placeholder="supportNumberCode" data-th-placeholder="#{label_collectionitem_supportnumbercode}" data-toggle="tooltip" aria-describedby="supportNumberCodeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('supportNumberCode')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('supportNumberCode')}" aria-hidden="true"></span>
+      <span id="supportNumberCode-error" class="help-block" data-th-if="${#fields.hasErrors('supportNumberCode')}" data-th-errors="*{supportNumberCode}">Error message.</span>
+  </div>
+</div>
+             </fieldset>
+
+
+              <!-- buttons form -->
+              <div class="form-group">
+                <div class="col-md-12">
+                  <div class="pull-left">
+                    <button type="reset" class="btn btn-default" onclick="location.href='list.html'" data-th-onclick="'location.href=\'' + @{${collectionLink.to('list')}} + '\''" data-th-text="#{label_reset}">Cancel</button>
+                  </div>
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn-primary" data-th-text="#{label_save}">Save</button>
+                  </div>
+                </div>
+              </div>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+   </div>
+   <!-- /CONTAINER -->
+
+   <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+   </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" data-th-src="@{/webjars/datetimepicker/build/jquery.datetimepicker.full.min.js}"></script>
+    <script src="../../static/public/js/datetimepicker-defaults.js" data-th-src="@{/public/js/datetimepicker-defaults.js}"></script>
+
+    <!-- jquery.inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js" data-th-src="@{/webjars/jquery.inputmask/min/jquery.inputmask.bundle.min.js}"></script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+        jQuery(document).ready(
+      	  function() {
+      	    Inputmask.extendAliases({
+      	      'numeric' : {
+      	         'groupSeparator' : /*[[#{label_inputmask_groupSeparator}]]*/'.',
+      	         'radixPoint' : /*[[#{label_inputmask_radixPoint}]]*/','
+      	       },
+      	       'currency' : {
+      	          'prefix' : /*[[#{label_inputmask_prefix}]]*/'',
+      	          'suffix' : /*[[#{label_inputmask_suffix}]]*/' €'
+      	        }
+      	    });
+      	 });
+       })(jQuery);
+    </script>
+    <script src="../../static/public/js/inputmask-defaults.js" data-th-src="@{/public/js/inputmask-defaults.js}"></script>
+
+    <!-- JQuery Validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js" data-th-src="@{/webjars/jquery-validation/dist/additional-methods.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_es.js" data-th-src="@{/webjars/jquery-validation/src/localization/messages_}+${#locale.language}+'.js'" data-th-if="${#locale.language} != 'en'">
+      </script>
+    <script src="../../static/public/js/validation-defaults.js" data-th-src="@{/public/js/validation-defaults.js}">
+      </script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+         jQuery(document).ready(function() {
+      	   jQuery.extend( jQuery.validator.messages, {
+      	     'dateformat' : /*[[#{error_invalid_date}]]*/ 'Please enter a correct date/time',
+      	     'inputmask': /*[[#{error_invalid_maskValue}]]*/ 'Please enter a valid value',
+      	   });
+      	 });
+      })(jQuery);
+      </script>
+
+    </div>
+
+  </body>
+
+</html>

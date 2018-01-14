@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_digitalobject})}|">Show DigitalObject - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${digitalObject}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_digitalobject})}">Show DigitalObject</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_digitalobject})}">DigitalObject data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="digitalobject-doitem-field" data-z="2edee4cc">
+            	      <strong data-th-text="#{label_digitalobject_doitem}">doItem</strong>
+                    <span data-th-text="*{{doItem}}">doItemValue</span>
+         	        </li>
+                  <li id="digitalobject-caption-field" data-z="39248132">
+            	      <strong data-th-text="#{label_digitalobject_caption}">caption</strong>
+                    <span data-th-text="*{{caption}}">captionValue</span>
+         	        </li>
+                  <li id="digitalobject-filename-field" data-z="c804d04c">
+            	      <strong data-th-text="#{label_digitalobject_filename}">filename</strong>
+                    <span data-th-text="*{{filename}}">filenameValue</span>
+         	        </li>
+                  <li id="digitalobject-format-field" data-z="ae7ba18c">
+            	      <strong data-th-text="#{label_digitalobject_format}">format</strong>
+                    <span data-th-text="*{{format}}">formatValue</span>
+         	        </li>
+                  <li id="digitalobject-photo-field" data-z="a7967072">
+            	      <strong data-th-text="#{label_digitalobject_photo}">photo</strong>
+                    <span data-th-text="*{{photo}}">photoValue</span>
+         	        </li>
+                  <li id="digitalobject-referenceurl-field" data-z="6efe1e0c">
+            	      <strong data-th-text="#{label_digitalobject_referenceurl}">referenceUrl</strong>
+                    <span data-th-text="*{{referenceUrl}}">referenceUrlValue</span>
+         	        </li>
+                  <li id="digitalobject-createddate-field" data-z="2d5f15d2">
+            	      <strong data-th-text="#{label_digitalobject_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="digitalobject-createdby-field" data-z="5ff25572">
+            	      <strong data-th-text="#{label_digitalobject_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="digitalobject-modifieddate-field" data-z="ec7fcfec">
+            	      <strong data-th-text="#{label_digitalobject_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="digitalobject-modifiedby-field" data-z="c44ece0c">
+            	      <strong data-th-text="#{label_digitalobject_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="DigitalObject_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('DigitalObjectsItemThymeleafController').to('editForm').with('digitalObject', digitalObject.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="DigitalObject_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('DigitalObjectsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

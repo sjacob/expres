@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_exhibition})}|">Show Exhibition - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${exhibition}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="exhibition-title-field" data-z="112c2d44">
+            	      <strong data-th-text="#{label_exhibition_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="exhibition-curator-field" data-z="90749844">
+            	      <strong data-th-text="#{label_exhibition_curator}">curator</strong>
+                    <span data-th-text="*{{curator}}">curatorValue</span>
+         	        </li>
+                  <li id="exhibition-filenumber-field" data-z="fbfe771a">
+            	      <strong data-th-text="#{label_exhibition_filenumber}">fileNumber</strong>
+                    <span data-th-text="*{{fileNumber}}">fileNumberValue</span>
+         	        </li>
+                  <li id="exhibition-startdate-field" data-z="ae5367e4">
+            	      <strong data-th-text="#{label_exhibition_startdate}">startDate</strong>
+                    <span data-th-text="*{{startDate}}">startDateValue</span>
+         	        </li>
+                  <li id="exhibition-enddate-field" data-z="106c6204">
+            	      <strong data-th-text="#{label_exhibition_enddate}">endDate</strong>
+                    <span data-th-text="*{{endDate}}">endDateValue</span>
+         	        </li>
+                  <li id="exhibition-createddate-field" data-z="c62bc9e4">
+            	      <strong data-th-text="#{label_exhibition_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="exhibition-createdby-field" data-z="ca20e604">
+            	      <strong data-th-text="#{label_exhibition_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="exhibition-modifieddate-field" data-z="6d499e1a">
+            	      <strong data-th-text="#{label_exhibition_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="exhibition-modifiedby-field" data-z="9ff24fba">
+            	      <strong data-th-text="#{label_exhibition_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

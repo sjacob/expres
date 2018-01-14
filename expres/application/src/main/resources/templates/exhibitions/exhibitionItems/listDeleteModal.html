@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="exhibitionitems-detailModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('ExhibitionsItemExhibitionItemsThymeleafController')}">
+    <table id="exhibitionitems-detail-table-item-to-remove" data-parent-table="exhibition-entity-table" data-data-parent-id="${exhibition != null ? exhibition.id : ''}" data-data-load-url="${collectionLink.to('datatablesByIdsIn').with('exhibition', '_PARENTID_')}">
+      <thead>
+        <tr>
+              <th data-data="exhibition" data-th-text="#{label_exhibition_exhibitionitems_exhibition}">exhibition</th>
+              <th data-data="display" data-th-text="#{label_exhibition_exhibitionitems_display}">display</th>
+              <th data-data="galleryPlacement" data-th-text="#{label_exhibition_exhibitionitems_galleryplacement}">galleryPlacement</th>
+              <th data-data="galleryReferenceNumber" data-th-text="#{label_exhibition_exhibitionitems_galleryreferencenumber}">galleryReferenceNumber</th>
+              <th data-data="relatedItems" data-th-text="#{label_exhibition_exhibitionitems_relateditems}">relatedItems</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+              <td>exhibition</td>
+              <td>display</td>
+              <td>galleryPlacement</td>
+              <td>galleryReferenceNumber</td>
+              <td>relatedItems</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

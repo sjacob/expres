@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_exhibitionitem})}|">Show ExhibitionItem - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${exhibitionItem}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="exhibitionitem-exhibition-field" data-z="231d634d">
+            	      <strong data-th-text="#{label_exhibitionitem_exhibition}">exhibition</strong>
+                    <span data-th-text="*{{exhibition}}">exhibitionValue</span>
+         	        </li>
+                  <li id="exhibitionitem-display-field" data-z="bc95da11">
+            	      <strong data-th-text="#{label_exhibitionitem_display}">display</strong>
+                    <span data-th-text="*{{display}}">displayValue</span>
+         	        </li>
+                  <li id="exhibitionitem-galleryplacement-field" data-z="b57d882d">
+            	      <strong data-th-text="#{label_exhibitionitem_galleryplacement}">galleryPlacement</strong>
+                    <span data-th-text="*{{galleryPlacement}}">galleryPlacementValue</span>
+         	        </li>
+                  <li id="exhibitionitem-galleryreferencenumber-field" data-z="1b9afed">
+            	      <strong data-th-text="#{label_exhibitionitem_galleryreferencenumber}">galleryReferenceNumber</strong>
+                    <span data-th-text="*{{galleryReferenceNumber}}">galleryReferenceNumberValue</span>
+         	        </li>
+                  <li id="exhibitionitem-relateditems-field" data-z="902d82ed">
+            	      <strong data-th-text="#{label_exhibitionitem_relateditems}">relatedItems</strong>
+                    <span data-th-text="*{{relatedItems}}">relatedItemsValue</span>
+         	        </li>
+                  <li id="exhibitionitem-requestbarcodenumber-field" data-z="5143086d">
+            	      <strong data-th-text="#{label_exhibitionitem_requestbarcodenumber}">requestBarcodeNumber</strong>
+                    <span data-th-text="*{{requestBarcodeNumber}}">requestBarcodeNumberValue</span>
+         	        </li>
+                  <li id="exhibitionitem-ecvm-field" data-z="b337ed0d">
+            	      <strong data-th-text="#{label_exhibitionitem_ecvm}">ecvm</strong>
+                    <span data-th-text="*{{ecvm}}">ecvmValue</span>
+         	        </li>
+                  <li id="exhibitionitem-ecvmdate-field" data-z="6395946d">
+            	      <strong data-th-text="#{label_exhibitionitem_ecvmdate}">ecvmDate</strong>
+                    <span data-th-text="*{{ecvmDate}}">ecvmDateValue</span>
+         	        </li>
+                  <li id="exhibitionitem-releasedby-field" data-z="84725acd">
+            	      <strong data-th-text="#{label_exhibitionitem_releasedby}">releasedBy</strong>
+                    <span data-th-text="*{{releasedBy}}">releasedByValue</span>
+         	        </li>
+                  <li id="exhibitionitem-requestedby-field" data-z="67c820d1">
+            	      <strong data-th-text="#{label_exhibitionitem_requestedby}">requestedBy</strong>
+                    <span data-th-text="*{{requestedBy}}">requestedByValue</span>
+         	        </li>
+                  <li id="exhibitionitem-measuementfordisplay-field" data-z="b4552d8d">
+            	      <strong data-th-text="#{label_exhibitionitem_measuementfordisplay}">measuementForDisplay</strong>
+                    <span data-th-text="*{{measuementForDisplay}}">measuementForDisplayValue</span>
+         	        </li>
+                  <li id="exhibitionitem-treasuresgalleryiteration-field" data-z="5a7e43f1">
+            	      <strong data-th-text="#{label_exhibitionitem_treasuresgalleryiteration}">treasuresGalleryIteration</strong>
+                    <span data-th-text="*{{treasuresGalleryIteration}}">treasuresGalleryIterationValue</span>
+         	        </li>
+                  <li id="exhibitionitem-installedon-field" data-z="dc289e51">
+            	      <strong data-th-text="#{label_exhibitionitem_installedon}">installedOn</strong>
+                    <span data-th-text="*{{installedOn}}">installedOnValue</span>
+         	        </li>
+                  <li id="exhibitionitem-deinstalledon-field" data-z="e21b89f1">
+            	      <strong data-th-text="#{label_exhibitionitem_deinstalledon}">deinstalledOn</strong>
+                    <span data-th-text="*{{deinstalledOn}}">deinstalledOnValue</span>
+         	        </li>
+                  <li id="exhibitionitem-theme-field" data-z="eea729b1">
+            	      <strong data-th-text="#{label_exhibitionitem_theme}">theme</strong>
+                    <span data-th-text="*{{theme}}">themeValue</span>
+         	        </li>
+                  <li id="exhibitionitem-story-field" data-z="cdc37431">
+            	      <strong data-th-text="#{label_exhibitionitem_story}">story</strong>
+                    <span data-th-text="*{{story}}">storyValue</span>
+         	        </li>
+                  <li id="exhibitionitem-captionshort-field" data-z="4b1d8acd">
+            	      <strong data-th-text="#{label_exhibitionitem_captionshort}">captionShort</strong>
+                    <span data-th-text="*{{captionShort}}">captionShortValue</span>
+         	        </li>
+                  <li id="exhibitionitem-captionlong-field" data-z="82e06931">
+            	      <strong data-th-text="#{label_exhibitionitem_captionlong}">captionLong</strong>
+                    <span data-th-text="*{{captionLong}}">captionLongValue</span>
+         	        </li>
+                  <li id="exhibitionitem-permissionrequested-field" data-z="3560e351">
+            	      <strong data-th-text="#{label_exhibitionitem_permissionrequested}">permissionRequested</strong>
+                    <span data-th-text="*{{permissionRequested}}">permissionRequestedValue</span>
+         	        </li>
+                  <li id="exhibitionitem-permissiongrantedfor-field" data-z="5b02280d">
+            	      <strong data-th-text="#{label_exhibitionitem_permissiongrantedfor}">permissionGrantedFor</strong>
+                    <span data-th-text="*{{permissionGrantedFor}}">permissionGrantedForValue</span>
+         	        </li>
+                  <li id="exhibitionitem-pinkcompleted-field" data-z="5526f611">
+            	      <strong data-th-text="#{label_exhibitionitem_pinkcompleted}">pinkCompleted</strong>
+                    <span data-th-text="*{{pinkCompleted}}">pinkCompletedValue</span>
+         	        </li>
+                  <li id="exhibitionitem-isitemdigitised-field" data-z="6c8b30f1">
+            	      <strong data-th-text="#{label_exhibitionitem_isitemdigitised}">isItemDigitised</strong>
+                    <span data-th-text="*{{isItemDigitised}}">isItemDigitisedValue</span>
+         	        </li>
+                  <li id="exhibitionitem-digitisationrequired-field" data-z="8b450c2d">
+            	      <strong data-th-text="#{label_exhibitionitem_digitisationrequired}">digitisationRequired</strong>
+                    <span data-th-text="*{{digitisationRequired}}">digitisationRequiredValue</span>
+         	        </li>
+                  <li id="exhibitionitem-digitisationdetails-field" data-z="cb87f6b1">
+            	      <strong data-th-text="#{label_exhibitionitem_digitisationdetails}">digitisationDetails</strong>
+                    <span data-th-text="*{{digitisationDetails}}">digitisationDetailsValue</span>
+         	        </li>
+                  <li id="exhibitionitem-digitisationnotes-field" data-z="fee1df51">
+            	      <strong data-th-text="#{label_exhibitionitem_digitisationnotes}">digitisationNotes</strong>
+                    <span data-th-text="*{{digitisationNotes}}">digitisationNotesValue</span>
+         	        </li>
+                  <li id="exhibitionitem-dlcjobnumber-field" data-z="3f09444d">
+            	      <strong data-th-text="#{label_exhibitionitem_dlcjobnumber}">dlcJobNumber</strong>
+                    <span data-th-text="*{{dlcJobNumber}}">dlcJobNumberValue</span>
+         	        </li>
+                  <li id="exhibitionitem-reproductionmedium-field" data-z="605be72d">
+            	      <strong data-th-text="#{label_exhibitionitem_reproductionmedium}">reproductionMedium</strong>
+                    <span data-th-text="*{{reproductionMedium}}">reproductionMediumValue</span>
+         	        </li>
+                  <li id="exhibitionitem-reproductiondetails-field" data-z="28ad5471">
+            	      <strong data-th-text="#{label_exhibitionitem_reproductiondetails}">reproductionDetails</strong>
+                    <span data-th-text="*{{reproductionDetails}}">reproductionDetailsValue</span>
+         	        </li>
+                  <li id="exhibitionitem-eitem-field" data-z="878f6bf1">
+            	      <strong data-th-text="#{label_exhibitionitem_eitem}">eItem</strong>
+                    <span data-th-text="*{{eItem}}">eItemValue</span>
+         	        </li>
+                  <li id="exhibitionitem-modifiedby-field" data-z="6b4db94d">
+            	      <strong data-th-text="#{label_exhibitionitem_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+                  <li id="exhibitionitem-createddate-field" data-z="663d92b1">
+            	      <strong data-th-text="#{label_exhibitionitem_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="exhibitionitem-createdby-field" data-z="f1b87e11">
+            	      <strong data-th-text="#{label_exhibitionitem_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="exhibitionitem-modifieddate-field" data-z="cf70eeed">
+            	      <strong data-th-text="#{label_exhibitionitem_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

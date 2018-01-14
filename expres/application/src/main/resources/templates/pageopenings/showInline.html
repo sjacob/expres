@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_pageopening})}|">Show PageOpening - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${pageOpening}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="pageopening-exhibitionitem-field" data-z="34e3e91e">
+            	      <strong data-th-text="#{label_pageopening_exhibitionitem}">exhibitionItem</strong>
+                    <span data-th-text="*{{exhibitionItem}}">exhibitionItemValue</span>
+         	        </li>
+                  <li id="pageopening-title-field" data-z="d35d95a0">
+            	      <strong data-th-text="#{label_pageopening_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="pageopening-pagenumber-field" data-z="2f14d9de">
+            	      <strong data-th-text="#{label_pageopening_pagenumber}">pageNumber</strong>
+                    <span data-th-text="*{{pageNumber}}">pageNumberValue</span>
+         	        </li>
+                  <li id="pageopening-displaystart-field" data-z="2060c8de">
+            	      <strong data-th-text="#{label_pageopening_displaystart}">displayStart</strong>
+                    <span data-th-text="*{{displayStart}}">displayStartValue</span>
+         	        </li>
+                  <li id="pageopening-displayend-field" data-z="efc7417e">
+            	      <strong data-th-text="#{label_pageopening_displayend}">displayEnd</strong>
+                    <span data-th-text="*{{displayEnd}}">displayEndValue</span>
+         	        </li>
+                  <li id="pageopening-createddate-field" data-z="ea6c7d40">
+            	      <strong data-th-text="#{label_pageopening_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="pageopening-createdby-field" data-z="ca6ec060">
+            	      <strong data-th-text="#{label_pageopening_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="pageopening-modifieddate-field" data-z="d11f563e">
+            	      <strong data-th-text="#{label_pageopening_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="pageopening-modifiedby-field" data-z="a95fc0de">
+            	      <strong data-th-text="#{label_pageopening_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

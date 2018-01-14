@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_loan})}|">Show Loan - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${loan}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="loan-loanno-field" data-z="3a09297b">
+            	      <strong data-th-text="#{label_loan_loanno}">loanNo</strong>
+                    <span data-th-text="*{{loanNo}}">loanNoValue</span>
+         	        </li>
+                  <li id="loan-hprmfilenumber-field" data-z="91531abb">
+            	      <strong data-th-text="#{label_loan_hprmfilenumber}">hprmFileNumber</strong>
+                    <span data-th-text="*{{hprmFileNumber}}">hprmFileNumberValue</span>
+         	        </li>
+                  <li id="loan-loantype-field" data-z="e6097f5b">
+            	      <strong data-th-text="#{label_loan_loantype}">loanType</strong>
+                    <span data-th-text="*{{loanType}}">loanTypeValue</span>
+         	        </li>
+                  <li id="loan-reasonforloan-field" data-z="351bbb23">
+            	      <strong data-th-text="#{label_loan_reasonforloan}">reasonForLoan</strong>
+                    <span data-th-text="*{{reasonForLoan}}">reasonForLoanValue</span>
+         	        </li>
+                  <li id="loan-startdate-field" data-z="f99bc5e3">
+            	      <strong data-th-text="#{label_loan_startdate}">startDate</strong>
+                    <span data-th-text="*{{startDate}}">startDateValue</span>
+         	        </li>
+                  <li id="loan-enddate-field" data-z="e1e233c3">
+            	      <strong data-th-text="#{label_loan_enddate}">endDate</strong>
+                    <span data-th-text="*{{endDate}}">endDateValue</span>
+         	        </li>
+                  <li id="loan-loanfees-field" data-z="cc387cfb">
+            	      <strong data-th-text="#{label_loan_loanfees}">loanFees</strong>
+                    <span data-th-text="*{{loanFees}}">loanFeesValue</span>
+         	        </li>
+                  <li id="loan-sfrreceived-field" data-z="641522e3">
+            	      <strong data-th-text="#{label_loan_sfrreceived}">sfrReceived</strong>
+                    <span data-th-text="*{{sfrReceived}}">sfrReceivedValue</span>
+         	        </li>
+                  <li id="loan-otherloaninfo-field" data-z="d74c1443">
+            	      <strong data-th-text="#{label_loan_otherloaninfo}">otherLoanInfo</strong>
+                    <span data-th-text="*{{otherLoanInfo}}">otherLoanInfoValue</span>
+         	        </li>
+                  <li id="loan-loancontact-field" data-z="4af56ca3">
+            	      <strong data-th-text="#{label_loan_loancontact}">loanContact</strong>
+                    <span data-th-text="*{{loanContact}}">loanContactValue</span>
+         	        </li>
+                  <li id="loan-createddate-field" data-z="60d4a423">
+            	      <strong data-th-text="#{label_loan_createddate}">createdDate</strong>
+                    <span data-th-text="*{{createdDate}}">createdDateValue</span>
+         	        </li>
+                  <li id="loan-createdby-field" data-z="15694403">
+            	      <strong data-th-text="#{label_loan_createdby}">createdBy</strong>
+                    <span data-th-text="*{{createdBy}}">createdByValue</span>
+         	        </li>
+                  <li id="loan-modifieddate-field" data-z="27bc0bbb">
+            	      <strong data-th-text="#{label_loan_modifieddate}">modifiedDate</strong>
+                    <span data-th-text="*{{modifiedDate}}">modifiedDateValue</span>
+         	        </li>
+                  <li id="loan-modifiedby-field" data-z="bdb5b19b">
+            	      <strong data-th-text="#{label_loan_modifiedby}">modifiedBy</strong>
+                    <span data-th-text="*{{modifiedBy}}">modifiedByValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

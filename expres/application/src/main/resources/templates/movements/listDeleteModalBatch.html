@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="movement-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('MovementsCollectionThymeleafController')},itemLink=${@linkBuilder.of('MovementsItemThymeleafController')}">
+    <table id="movement-entity-table-items-to-remove-batch" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="mItem" data-th-text="#{label_movement_mitem}">mItem</th>
+          <th data-data="permanentLocation" data-th-text="#{label_movement_permanentlocation}">permanentLocation</th>
+          <th data-data="currentLocation" data-th-text="#{label_movement_currentlocation}">currentLocation</th>
+          <th data-data="locationNotes" data-th-text="#{label_movement_locationnotes}">locationNotes</th>
+          <th data-data="movementNotes" data-th-text="#{label_movement_movementnotes}">movementNotes</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>mItem</td>
+          <td>permanentLocation</td>
+          <td>currentLocation</td>
+          <td>locationNotes</td>
+          <td>movementNotes</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->
